@@ -1,0 +1,9 @@
+/* Section AboutUs */
+.about__title {
+  margin-bottom: 30px;
+}
+
+.about__desc {
+  display: block;
+  max-width: 1080px;
+}

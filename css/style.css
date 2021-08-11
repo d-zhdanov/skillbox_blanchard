@@ -1,0 +1,9 @@
+@import url('normalize.css') screen;
+@import url('initial.css') screen;
+
+@import url('header.css') screen;
+@import url('hero.css') screen;
+@import url('about.css') screen;
+@import url('galery.css') screen;
+@import url('catalog.css') screen;
+@import url('events.css') screen;
