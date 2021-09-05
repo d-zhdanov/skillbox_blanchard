@@ -76,14 +76,14 @@
 }
 .swiper-button-prev {
   left: 0;
-  background-image: url('../img/galery_arow-left.svg');
+  background-image: url('../img/galery_arrow-left.svg');
 }
 .swiper-button-prev::after {
   display: none;
 }
 .swiper-button-next {
   right: 0;
-  background-image: url('../img/galery_arow-right.svg');
+  background-image: url('../img/galery_arrow-right.svg');
 }
 .swiper-button-next::after {
   display: none;

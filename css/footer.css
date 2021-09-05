@@ -1,0 +1,37 @@
+/* Section Footer */
+.footer {
+  background: black;
+}
+
+.footer__container {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__logo {
+  margin-right: auto;
+}
+
+.footer__social {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.footer__social:not(:last-child) {
+  margin-right: 20px;
+}
+.contacts__social_vk{
+  background-image: url('../img/footer_vk.svg');
+}
+.contacts__social_in{
+  background-image: url('../img/footer_in.svg');
+}
+.contacts__social_fb{
+  background-image: url('../img/footer_fb.svg');
+}

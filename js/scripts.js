@@ -48,5 +48,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // События. Дополнительные
+  // Events. More cards
+  document.querySelectorAll('.events__more').forEach(function(painterBtn) {
+    painterBtn.addEventListener('click', function (event) {
+
+      document.querySelectorAll('.events__item_disabled').forEach(function(painterItem) {
+        painterItem.classList.remove('events__item_disabled');
+      });
+
+      painterBtn.classList.add('events__item_disabled');
+    });
+  });
+
+  // Contacts
+  ymaps.ready(init);
+  function init(){
+    var myMap = new ymaps.Map("contacts__map", {
+      center: [55.76, 37.64],
+      zoom: 15
+    });
+  };
+
 });

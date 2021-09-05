@@ -1,0 +1,100 @@
+/* Section Contacts */
+.contacts__title {
+  margin-bottom: 30px;
+}
+
+.contacts__container {
+  height: 700px;
+  display: flex;
+}
+
+.contacts__feedback {
+  flex: 0 1 700px;
+  width: 700px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contacts__container::before {
+  content: '';
+  flex: 0 11 160px;
+}
+
+.contacts__title_room {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.contacts__address {
+  margin-bottom: 27px;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.contacts__callback {
+  margin-bottom: 19px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.contacts__form_input {
+  width: 400px;
+  height: 40px;
+  padding-left: 24px;
+  margin-bottom: 23px;
+  border: 1px solid #333;
+  border-radius: 100px;
+}
+.contacts__form_input::placeholder {
+  font-size: 16px;
+  line-height: 32px;
+  color: #999;
+}
+
+.contacts__form_btn {
+  width: 157px;
+  height: 59px;
+  margin-bottom: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  color: #9D5CD0;
+  border: 2px solid #9D5CD0;
+  border-radius: 100px;
+}
+
+.contacts__title_social {
+  margin-bottom: 18px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.contacts__map {
+  flex: 0 1 1060px;
+  width: 100%;
+  height: 100%;
+}
+
+
+.contacts__mes {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.contacts__mes:not(:last-child) {
+  margin-right: 20px;
+}
+.contacts__mes_w {
+  background-image: url('../img/contacts_ico_whatsapp.svg');
+}
+.contacts__mes_t {
+  background-image: url('../img/contacts_ico_telegram.svg');
+}
