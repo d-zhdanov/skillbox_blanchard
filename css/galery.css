@@ -55,6 +55,7 @@
 .galery__slide {
   height: 350px;
   width: 350px;
+  object-fit: contain;
 }
 
 .galery__navigation {
