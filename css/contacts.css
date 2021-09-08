@@ -98,3 +98,8 @@
 .contacts__mes_t {
   background-image: url('../img/contacts_ico_telegram.svg');
 }
+
+
+.js-validate-error-label {
+  margin-bottom: 23px;
+}

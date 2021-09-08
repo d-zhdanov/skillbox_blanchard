@@ -27,17 +27,32 @@
 }
 
 .nav__link {
+  padding: 6px;
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
 }
+.nav__link:hover {
+  color: #C283F3;
+}
+.nav__link:focus {
+  background: #7943A4;
+}
+.nav__link:active {
+  color: #7943A4;
+  background: transparent;
+}
 
 .header__login {
   display: block;
-  padding-left: 20px;
   font-size: 18px;
   line-height: 25px;
-  background: url('../img/header_login.svg') no-repeat left / 13px;
+}
+.header__login_img {
+  width: 13px;
+  height: 13px;
+  margin-right: 7px;
+  fill: currentColor;
 }
 
 

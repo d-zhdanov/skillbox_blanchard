@@ -74,6 +74,11 @@
   height: 150px;
   max-width: 450px;
   object-fit: cover;
+  filter: grayscale(1) opacity(.4);
+  transition: filter .3s ease-in-out;
+}
+.projects__slide:hover {
+  filter: none;
 }
 
 .projects__btn_prev {

@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   <script src="js/swiper-bundle.min.js"></script>
 
+  <script src="js/inputmask.min.js"></script>
+  <script src="js/just-validate.min.js"></script>
+
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
 
   <link rel="stylesheet" href="css/style.css">
@@ -51,7 +54,12 @@
               </li>
             </ul>
           </nav>
-          <a href="#" class="header__login">Войти</a>
+          <a href="#" class="header__login">
+            <svg class="header__login_img" aria-hidden="true">
+              <use xlink:href="#header__login_img" />
+            </svg>
+            Войти
+          </a>
         </div>
       </div>
     </section>
@@ -556,15 +564,15 @@
         <div class="projects__slider">
           <div class="swiper-container projects__swiper">
             <div class="swiper-wrapper projects__wrapper">
-              <img class="swiper-slide projects__slide" src="images/partners/1.svg" alt="Freelands Foundation">
-              <img class="swiper-slide projects__slide" src="images/partners/2.svg" alt="Freelands Foundation">
-              <img class="swiper-slide projects__slide" src="images/partners/3.svg" alt="Freelands Foundation">
-              <img class="swiper-slide projects__slide" src="images/partners/4.svg" alt="Freelands Foundation">
-              <img class="swiper-slide projects__slide" src="images/partners/5.svg" alt="Freelands Foundation">
-              <img class="swiper-slide projects__slide" src="images/partners/6.svg" alt="Freelands Foundation">
-              <img class="swiper-slide projects__slide" src="images/partners/7.svg" alt="Freelands Foundation">
-              <img class="swiper-slide projects__slide" src="images/partners/8.svg" alt="Freelands Foundation">
-              <img class="swiper-slide projects__slide" src="images/partners/9.svg" alt="Freelands Foundation">
+              <img class="swiper-slide projects__slide" src="images/partners/1.png" alt="Freelands Foundation">
+              <img class="swiper-slide projects__slide" src="images/partners/2.png" alt="Institute for Comtemporary Art">
+              <img class="swiper-slide projects__slide" src="images/partners/3.png" alt="Workhouse">
+              <img class="swiper-slide projects__slide" src="images/partners/4.png" alt="1849">
+              <img class="swiper-slide projects__slide" src="images/partners/5.png" alt="Hiscox">
+              <img class="swiper-slide projects__slide" src="images/partners/6.png" alt="Camden">
+              <img class="swiper-slide projects__slide" src="images/partners/7.png" alt="Stassen">
+              <img class="swiper-slide projects__slide" src="images/partners/8.png" alt="Watts">
+              <img class="swiper-slide projects__slide" src="images/partners/9.png" alt="eSAD">
             </div>
           </div>
           <div class="swiper-button-prev projects__btn_prev"></div>
@@ -582,8 +590,8 @@
           <span class="contacts__address">Леонтьевский переулок, дом 5/1</span>
           <span class="contacts__callback">Заказать обратный звонок</span>
           <form class="contacts__form" action="#" method="post">
-            <input class="contacts__form_input" type="text" name="name" id="name" placeholder="Имя*">
-            <input class="contacts__form_input" type="tel" name="tel" id="tel" placeholder="Телефон*">
+            <input class="contacts__form_input" type="text" name="name" id="name" placeholder="Имя*" data-validate-field="name">
+            <input class="contacts__form_input" type="tel" name="tel" id="tel" placeholder="Телефон*" data-validate-field="tel">
             <button class="btn contacts__form_btn" type="submit">Заказать</button>
           </form>
           <h3 class="contacts__title_social">Связаться в один клик</h3>
@@ -610,5 +618,10 @@
   <script src="js/swiper.js"></script>
   <script src="js/scripts.js"></script>
 
+  <svg class="visually-hidden" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="header__login_img" viewBox="0 0 13 13">
+      <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="currentColor"/>
+    </symbol>
+  </svg>
 </body>
 </html>
