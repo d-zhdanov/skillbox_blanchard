@@ -42,10 +42,61 @@
 .hero__button {
   width: 314px;
   height: 70px;
+  position: relative;
   color: white;
   font-weight: 700;
   font-size: 18px;
   line-height: 25px;
   background-color: #9D5CD0;
+  border: 3px solid transparent;
   border-radius: 100px;
+  transition-property: background-color, border-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+.hero__button:hover {
+  border-color: #D1A9F0;
+}
+.hero__button:focus {
+  border-color: transparent;
+}
+.hero__button::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: -6px;
+  width: 320px;
+  height: 76px;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 100px;
+  border-color: transparent;
+  transition: border-color .3s ease-in-out;
+}
+.hero__button:focus::before {
+  border-color: white;
+}
+.hero__button::after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: -8px;
+  width: 324px;
+  height: 80px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 100px;
+  border-color: transparent;
+  transition: border-color .3s ease-in-out;
+}
+.hero__button:focus::after {
+  border-color: #9D5CD0;
+}
+.hero__button:active {
+  background-color: #7943A4;
+  border-color: #D1A9F0;
+}
+.hero__button:active::before,
+.hero__button:active::after {
+  border-color: transparent;
 }

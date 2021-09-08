@@ -27,26 +27,33 @@
 }
 
 .nav__link {
-  padding: 6px;
+  padding: 8px;
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
+  transition-property: color, background-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
 .nav__link:hover {
   color: #C283F3;
 }
 .nav__link:focus {
-  background: #7943A4;
+  background-color: #7943A4;
 }
 .nav__link:active {
   color: #7943A4;
-  background: transparent;
+  background-color: transparent;
 }
 
 .header__login {
   display: block;
+  padding: 8px;
   font-size: 18px;
   line-height: 25px;
+  transition-property: color, background-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
 .header__login_img {
   width: 13px;
@@ -54,7 +61,16 @@
   margin-right: 7px;
   fill: currentColor;
 }
-
+.header__login:hover {
+  color: #C283F3;
+}
+.header__login:focus {
+  background-color: #7943A4;
+}
+.header__login:active {
+  color: #9D5CD0;
+  background-color: transparent;
+}
 
 
 .header__search {
@@ -76,13 +92,36 @@
   margin-right: 96px;
 }
 
-.search_button {
-  padding-right: 15px;
+.filter__button {
+  padding: 8px;
   color: white;
   font-size: 18px;
   line-height: 25px;
-  background: url('../img/header__search-arrow.svg') no-repeat right center / 12px 7px;
+  transition-property: color, background-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
+.header__filter_img {
+  width: 12px;
+  height: 7px;
+  stroke: currentColor;
+  fill: none;
+  transition: transform .1s ease-in-out;
+}
+.filter__button:hover {
+  color: #9D5CD0;
+}
+.filter__button:focus {
+  background-color: #7943A4;
+}
+.filter__button:active {
+  color: #7943A4;
+  background-color: transparent;
+}
+.filter__button:active .header__filter_img {
+  transform: rotate(180deg);
+}
+
 
 .search__form {
   padding-left: 31px;
@@ -93,9 +132,20 @@
   color: white;
   border: none;
   border-bottom: 1px solid white;
-  background-color: transparent ;
+  background-color: transparent;
+  outline: none;
+}
+.search__input:hover,
+.search__input:focus {
+  border-bottom-color: #C283F3;
+}
+.search__input:active {
+  border-bottom-color: #7943A4;
 }
 
-.search__input::placeholder{
+.search__input::placeholder {
   color: white;
+}
+.search__input:focus::placeholder {
+  color: transparent;
 }

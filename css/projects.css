@@ -49,8 +49,40 @@
 }
 
 .projects__link {
+  position: relative;
+  display: inline-block;
+  margin-left: 4px;
   color: #9D5CD0;
+  border-bottom: 1px solid transparent;
 }
+.projects__link::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: -4px;
+  right: -6px;
+  bottom: -4px;
+  background-color: transparent;
+  z-index: -1;
+}
+.projects__link:hover {
+  border-color: currentColor;
+}
+.projects__link:focus {
+  color: white;
+  border-color: transparent;
+}
+.projects__link:focus::before {
+  background-color: #9D5CD0;
+}
+.projects__link:active {
+  color: #7943A4;
+  border-color: currentColor;
+}
+.projects__link:active::before {
+  background-color: transparent;
+}
+
 
 .projects__partner_title {
   margin-bottom: 23px;

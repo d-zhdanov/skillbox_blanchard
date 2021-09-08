@@ -77,8 +77,37 @@
 .events__item_link {
   margin-left: 50px;
   width: fit-content;
+  position: relative;
   font-size: 16px;
   line-height: 32px;
   color: #9D5CD0;
   border-bottom: 1px solid #9D5CD0;
+}
+.events__item_link::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  background-color: transparent;
+  z-index: -1;
+}
+.events__item_link:hover {
+  color: #7943A4;
+  border-bottom-color: currentColor;
+}
+.events__item_link:focus {
+  color: white;
+  border-bottom-color: currentColor;
+}
+.events__item_link:focus::before {
+  background-color: #9D5CD0;
+}
+.events__item_link:active {
+  color: black;
+  border-bottom-color: currentColor;
+}
+.events__item_link:active::before {
+  background-color: transparent;
 }
