@@ -6,6 +6,10 @@
   z-index: 2;
 }
 
+.header_logo {
+  margin-right: 180px;
+}
+
 .header__menu {
   color: white;
   background-color: black ;
@@ -14,8 +18,11 @@
 .header__container {
   height: 100px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.nav {
+  margin-right: auto;
 }
 
 .nav__list {
@@ -23,14 +30,14 @@
 }
 
 .nav__item:not(:last-child) {
-  margin-right: 62px;
+  margin-right: 64px;
 }
 
 .nav__link {
-  padding: 8px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 25px;
+  letter-spacing: 1px;
   transition-property: color, background-color;
   transition-duration: .3s;
   transition-timing-function: ease-in-out;
@@ -48,7 +55,6 @@
 
 .header__login {
   display: block;
-  padding: 8px;
   font-size: 18px;
   line-height: 25px;
   transition-property: color, background-color;
@@ -58,7 +64,7 @@
 .header__login_img {
   width: 13px;
   height: 13px;
-  margin-right: 7px;
+  margin-right: 2px;
   fill: currentColor;
 }
 .header__login:hover {
@@ -93,7 +99,6 @@
 }
 
 .filter__button {
-  padding: 8px;
   color: white;
   font-size: 18px;
   line-height: 25px;
@@ -124,12 +129,18 @@
 
 
 .search__form {
+  width: 251px;
   padding-left: 31px;
-  background: url('../img/header__search.svg') no-repeat left / contain;
+  font-size: 18px;
+  line-height: 25px;
+  background: url('../img/header__search.svg') no-repeat left bottom / 23px;
 }
 
 .search__input {
   color: white;
+  padding: 4px 0;
+  width: 100%;
+  vertical-align: bottom;
   border: none;
   border-bottom: 1px solid white;
   background-color: transparent;

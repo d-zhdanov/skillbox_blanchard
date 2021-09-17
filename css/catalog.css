@@ -1,12 +1,22 @@
 /* Section Catalog */
 .catalog__title {
   display: inline-block;
-  margin-right: 39px;
+  margin-right: 40px;
+}
+
+.catalog__tags {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 13px;
 }
 
 .catalog__btn_list {
-  display: inline-block;
-  margin-bottom: 23px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2px;
+  height: 66px;
 }
 
 .catalog__btn_item {
@@ -15,11 +25,12 @@
 }
 
 .catalog__btn {
+  position: relative;
   height: 46px;
   width: 46px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 .catalog__btn_fra {
   background-image: url('../img/catalog_ico-fra.svg');
@@ -37,9 +48,21 @@
   background-image: url('../img/catalog_ico-bel.svg');
 }
 
+.catalog__btn_active::after {
+  content: '';
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  top: -10px;
+  bottom: -10px;
+  border: 2px solid #7943A4;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
 .catalog__intro {
   max-width: 1080px;
-  margin-bottom: 50px;
+  margin-bottom: 39px;
   font-size: 16px;
   line-height: 32px;
 }
@@ -79,7 +102,7 @@
 
 .catalog__img {
   max-width: 750px;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 
 .catalog__painters_item:not(:first-child) {
@@ -87,13 +110,15 @@
 }
 
 .catalog__item_title {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   font-weight: 600;
   font-size: 24px;
   line-height: 33px;
 }
 
 .catalog__item_lived {
+  display: inline-block;
+  margin-bottom: 6px;
   color: #999;
   font-size: 12px;
   line-height: 16px;
@@ -116,16 +141,44 @@
   line-height: 32px;
 }
 
+.catalog__painters_btn {
+  height: 116px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-color: #CACACA;
+  transition: .7s;
+}
+.catalog__painters_btn-active {
+  border-color: #7943A4;
+}
+.catalog__painters_btn:after {
+  content: '';
+  height: 50px;
+  width: 50px;
+  background: url('../img/catalog_button.svg') no-repeat right / contain;
+}
+.catalog__painters_btn-active:after {
+  content: '';
+  height: 50px;
+  width: 50px;
+  background: url('../img/catalog_button-active.svg') no-repeat right / contain;
+}
+
 .catalog__painters_list {
   max-height: 0;
   display: none;
   flex-flow: column wrap;
+  align-content: flex-start;
 }
 
 .catalog__painters_list-active {
   max-height: 288px;
   display: flex;
-  margin: 25px 0;
+  margin: 26px 0;
   animation: catalog__painters_appear .5s;
 }
 
@@ -145,34 +198,8 @@
   }
 }
 
-.catalog__painters_btn {
-  height: 114px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #CACACA;
-  border-bottom: 1px solid #CACACA;
-  transition: .7s;
-}
-.catalog__painters_btn-active {
-  border-top: 1px solid #7943A4;
-  border-bottom: 1px solid #7943A4;
-}
-.catalog__painters_btn:after {
-  content: '';
-  height: 50px;
-  width: 50px;
-  background: url('../img/catalog_button.svg') no-repeat right / contain;
-}
-.catalog__painters_btn-active:after {
-  content: '';
-  height: 50px;
-  width: 50px;
-  background: url('../img/catalog_button-active.svg') no-repeat right / contain;
-}
-
 .catalog__painter_name {
+  margin-right: 60px;
   font-size: 16px;
   line-height: 32px;
 }

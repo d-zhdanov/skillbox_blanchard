@@ -1,6 +1,6 @@
 /* Section Editions */
 .editions {
-  margin: 40px 0;
+  margin: 42px 0;
   /* padding: 113px 0 77px 0; */
   padding: 80px 0;
   color: white;
@@ -124,7 +124,7 @@
   height: 390px;
   width: 350px;
   object-fit: cover;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 }
 
 .editions__navigation {

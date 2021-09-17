@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Galery. Filter
+  const galery_filter = document.querySelector('#galery__filter');
+  const choices = new Choices(galery_filter, {
+    searchEnabled: false,
+    itemSelectText: '',
+    removeItemButton: true,
+  });
+
   // Табы для Каталога. Страны.
   document.querySelectorAll('.catalog__btn').forEach(function(catalogTabBtn) {
     catalogTabBtn.addEventListener('click', function (event) {

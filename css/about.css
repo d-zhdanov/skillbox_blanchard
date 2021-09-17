@@ -1,9 +1,11 @@
 /* Section AboutUs */
 .about__title {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .about__desc {
   display: block;
   max-width: 1080px;
+  font-size: 16px;
+  line-height: 32px;
 }
