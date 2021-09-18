@@ -1,11 +1,11 @@
 /* Section Projects */
 .projects__title {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .projects__text {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   max-width: 1080px;
   font-size: 16px;
   line-height: 32px;
@@ -85,6 +85,9 @@
 
 
 .projects__partner_title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
   margin-bottom: 23px;
 }
 

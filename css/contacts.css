@@ -1,6 +1,10 @@
 /* Section Contacts */
+.contacts {
+  padding-top: 40px;
+  padding-bottom: 0;
+}
 .contacts__title {
-  margin-bottom: 30px;
+  margin-bottom: 18px;
 }
 
 .contacts__container {
@@ -9,12 +13,11 @@
 }
 
 .contacts__feedback {
-  flex: 0 1 700px;
+  flex: 0 1 520px;
   width: 700px;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 .contacts__container::before {
   content: '';
@@ -22,6 +25,8 @@
 }
 
 .contacts__title_room {
+  margin-bottom: 5px;
+  padding-top: 122px;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
@@ -34,16 +39,16 @@
 }
 
 .contacts__callback {
-  margin-bottom: 19px;
+  margin-bottom: 17px;
   font-size: 24px;
   line-height: 32px;
 }
 
 .contacts__form_input {
   width: 400px;
-  height: 40px;
+  height: 41px;
   padding-left: 24px;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
   border: 1px solid #333;
   border-radius: 100px;
 }
@@ -56,7 +61,8 @@
 .contacts__form_btn {
   width: 157px;
   height: 59px;
-  margin-bottom: 38px;
+  margin-top: 4px;
+  margin-bottom: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,17 +75,21 @@
 }
 
 .contacts__title_social {
-  margin-bottom: 18px;
+  margin-bottom: 17px;
+  font-weight: 400;
   font-size: 24px;
   line-height: 32px;
 }
 
 .contacts__map {
-  flex: 0 1 1060px;
+  flex: 1 1 1%;
   width: 100%;
   height: 100%;
 }
 
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
 
 .contacts__mes {
   display: inline-block;
@@ -90,7 +100,7 @@
   background-size: contain;
 }
 .contacts__mes:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 16px;
 }
 .contacts__mes_w {
   background-image: url('../img/contacts_ico_whatsapp.svg');
