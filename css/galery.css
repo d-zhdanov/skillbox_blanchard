@@ -177,9 +177,21 @@
 }
 
 .galery__slide {
+  position: relative;
   height: 350px;
   width: 350px;
   object-fit: contain;
+}
+
+.galery__slide::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 350px;
+  width: 350px;
+  background: rgba(0, 0, 0, .2);
+  z-index: 1000;
 }
 
 .galery__navigation {

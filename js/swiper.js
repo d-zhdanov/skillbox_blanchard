@@ -2,7 +2,9 @@ const hero_swiper = new Swiper('.hero__swiper', {
   // Optional parameters
   loop: true,
   effect: 'fade',
-  crossfade: true,
+  fadeEffect: {
+    crossFade: true,
+  },
   autoplay: {
       delay: 6000,
       waitForTransition: true,
@@ -13,12 +15,11 @@ const hero_swiper = new Swiper('.hero__swiper', {
 
 const galery_swiper = new Swiper('.galery__swiper', {
   // Optional parameters
-  // loop: true,
+  grid: {
+    rows: 2,
+    fill: 'row',
+  },
   slidesPerView: 3, // or 'auto'
-  slidesPerColumn: 2,
-  slidesPerColumnFill: 'row',
-  // slidesPerGroup: 3,
-  // grabCursor: true,
   spaceBetween: 50,
 
   navigation: {
