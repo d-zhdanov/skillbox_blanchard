@@ -52,32 +52,6 @@ let galery_swiper = new Swiper(".galery__swiper", {
 
 
 
-// const galery_swiper = new Swiper('.galery__swiper', {
-//   // Optional parameters
-//   grid: {
-//     rows: 2,
-//     fill: 'row',
-//   },
-//   slidesPerView: 3, // or 'auto'
-//   spaceBetween: 50,
-
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-
-//   pagination: {
-//     el: '.galery__pagination',
-//     type: 'fraction',
-//   },
-
-//   autoplay: {
-//       delay: 6000,
-//       waitForTransition: true,
-//   },
-// });
-
-
 const editions_swiper = new Swiper('.editions__swiper', {
   // Optional parameters
   // loop: true,
@@ -86,8 +60,8 @@ const editions_swiper = new Swiper('.editions__swiper', {
   spaceBetween: 50,
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.editions__button_next',
+    prevEl: '.editions__button_prev',
   },
 
   pagination: {
@@ -110,8 +84,8 @@ const projects_swiper = new Swiper('.projects__swiper', {
   spaceBetween: 50,
 
   navigation: {
-    nextEl: '.projects__btn_next',
-    prevEl: '.projects__btn_prev',
+    nextEl: '.projects__button_next',
+    prevEl: '.projects__button_prev',
   },
 
   // pagination: {

@@ -635,7 +635,10 @@
             <div class="swiper editions__swiper">
               <div class="swiper-wrapper editions__wrapper">
                 <article class="swiper-slide">
-                  <img class="editions__slide" src="images/editions/01.jpg" alt="Искусство цвета">
+                  <picture>
+                    <source srcset="images/editions/01_2x.jpg" media="(min-width: 1024px)">
+                    <img class="editions__slide" src="images/editions/01.jpg" alt="Искусство цвета">
+                  </picture>
                   <div class="editions__slide_name-price">
                     <h3 class="editions__slide_desc editions__slide_name">Искусство цвета</h3>
                     <span class="editions__slide_desc editions__slide_price">620 руб</span>
@@ -644,7 +647,10 @@
                   <button class="btn editions__slide_desc editions__slide_btn" aria-label="Заказать книгу">Заказать</button>
                 </article>
                 <article class="swiper-slide">
-                  <img class="editions__slide" src="images/editions/02.jpg" alt="Типографика">
+                  <picture>
+                    <source srcset="images/editions/02_2x.jpg" media="(min-width: 1024px)">
+                    <img class="editions__slide" src="images/editions/02.jpg" alt="Типографика">
+                  </picture>
                   <div class="editions__slide_name-price">
                     <h3 class="editions__slide_desc editions__slide_name">Типографика</h3>
                     <span class="editions__slide_desc editions__slide_price">2 200 руб</span>
@@ -653,7 +659,10 @@
                   <button class="btn editions__slide_desc editions__slide_btn" aria-label="Заказать книгу">Заказать</button>
                 </article>
                 <article class="swiper-slide">
-                  <img class="editions__slide" src="images/editions/03.jpg" alt="Книга про буквы">
+                  <picture>
+                    <source srcset="images/editions/03_2x.jpg" media="(min-width: 1024px)">
+                    <img class="editions__slide" src="images/editions/03.jpg" alt="Книга про буквы">
+                  </picture>
                   <div class="editions__slide_name-price">
                     <h3 class="editions__slide_desc editions__slide_name">Книга про буквы</h3>
                     <span class="editions__slide_desc editions__slide_price">2 200 руб</span>
@@ -662,7 +671,10 @@
                   <button class="btn editions__slide_desc editions__slide_btn" aria-label="Заказать книгу">Заказать</button>
                 </article>
                 <article class="swiper-slide">
-                  <img class="editions__slide" src="images/editions/04.jpg" alt="Николай Ильин">
+                  <picture>
+                    <source srcset="images/editions/04_2x.jpg" media="(min-width: 1024px)">
+                    <img class="editions__slide" src="images/editions/04.jpg" alt="Николай Ильин">
+                  </picture>
                   <div class="editions__slide_name-price">
                     <h3 class="editions__slide_desc editions__slide_name">Николай Ильин</h3>
                     <span class="editions__slide_desc editions__slide_price">1 100 руб</span>
@@ -671,7 +683,10 @@
                   <button class="btn editions__slide_desc editions__slide_btn" aria-label="Заказать книгу">Заказать</button>
                 </article>
                 <article class="swiper-slide">
-                  <img class="editions__slide" src="images/editions/05.jpg" alt="Модульные сетки в граф...">
+                  <picture>
+                    <source srcset="images/editions/05_2x.jpg" media="(min-width: 1024px)">
+                    <img class="editions__slide" src="images/editions/05.jpg" alt="Модульные сетки в граф...">
+                  </picture>
                   <div class="editions__slide_name-price">
                     <h3 class="editions__slide_desc editions__slide_name">Модульные сетки в граф...</h3>
                     <span class="editions__slide_desc editions__slide_price">1 450 руб</span>
@@ -680,7 +695,10 @@
                   <button class="btn editions__slide_desc editions__slide_btn" aria-label="Заказать книгу">Заказать</button>
                 </article>
                 <article class="swiper-slide">
-                  <img class="editions__slide" src="images/editions/06.jpg" alt="Эволюция графических ст...">
+                  <picture>
+                    <source srcset="images/editions/06_2x.jpg" media="(min-width: 1024px)">
+                    <img class="editions__slide" src="images/editions/06.jpg" alt="Эволюция графических ст...">
+                  </picture>
                   <div class="editions__slide_name-price">
                     <h3 class="editions__slide_desc editions__slide_name">Эволюция графических ст...</h3>
                     <span class="editions__slide_desc editions__slide_price">3 200 руб</span>
@@ -689,7 +707,10 @@
                   <button class="btn editions__slide_desc editions__slide_btn" aria-label="Заказать книгу">Заказать</button>
                 </article>
                 <article class="swiper-slide">
-                  <img class="editions__slide" src="images/editions/07.jpg" alt="Искусство и визуальное в...">
+                  <picture>
+                    <source srcset="images/editions/07_2x.jpg" media="(min-width: 1024px)">
+                    <img class="editions__slide" src="images/editions/07.jpg" alt="Искусство и визуальное в...">
+                  </picture>
                   <div class="editions__slide_name-price">
                     <h3 class="editions__slide_desc editions__slide_name">Искусство и визуальное в...</h3>
                     <span class="editions__slide_desc editions__slide_price">2 200 руб</span>
@@ -727,6 +748,10 @@
         </p>
         <h3 class="projects__partner_title">Партнёры проектов:</h3>
         <div class="projects__slider">
+          <div class="projects__navigation">
+            <button class="projects__button projects__button_prev" aria-label="К предыдущему слайду"></button>
+            <button class="projects__button projects__button_next" aria-label="К следующему слайду"></button>
+          </div>
           <div class="swiper projects__swiper">
             <div class="swiper-wrapper projects__wrapper">
               <img class="swiper-slide projects__slide" src="images/partners/1.png" alt="Freelands Foundation">
@@ -740,12 +765,6 @@
               <img class="swiper-slide projects__slide" src="images/partners/9.png" alt="eSAD">
             </div>
           </div>
-          <svg class="editions__button swiper-button-prev projects__btn_prev" aria-label="Кнопка назад">
-            <use xlink:href="#swiper__arrow_left" />
-          </svg>
-          <svg class="editions__button swiper-button-next projects__btn_next" aria-label="Кнопка вперед">
-            <use xlink:href="#swiper__arrow_right" />
-          </svg>
         </div>
       </div>
     </section>
@@ -829,14 +848,6 @@
     </symbol>
     <symbol id="header__filter_img" viewBox="0 0 12 7">
       <path d="M11 1L6 6L1 1" stroke="currentColor"/>
-    </symbol>
-    <symbol id="swiper__arrow_left" viewBox="0 0 30 30">
-      <path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z"/>
-      <path d="M16 20L11 15L16 10" stroke="white"/>
-    </symbol>
-    <symbol id="swiper__arrow_right" viewBox="0 0 30 30">
-      <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z"/>
-      <path d="M14 20L19 15L14 10" stroke="white"/>
     </symbol>
   </svg>
 </body>
