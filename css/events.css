@@ -5,7 +5,7 @@
 
 .events__list {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
 }
 
@@ -39,9 +39,14 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 700px;
+  margin-right: 50px;
   margin-bottom: 50px;
   padding-bottom: 40px;
   border: 1px solid #CACACA;
+}
+
+.events__item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .events__item_disabled {
@@ -51,9 +56,6 @@
 .events__item_img {
   height: 300px;
   margin-bottom: 13px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 .events__item_where,

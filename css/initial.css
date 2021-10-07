@@ -44,7 +44,9 @@
 
 
 /* Инициализация цветовой палитры */
-:root {}
+:root {
+
+}
 
 
 /* Инициализация html */
@@ -131,6 +133,11 @@ body {
 }
 
 
+.logo {
+  width: 173px;
+  height: 40px;
+}
+
 .swiper {
   height: 100%;
 }
@@ -141,7 +148,15 @@ body {
   background-size: cover;
 }
 
-.logo {
-  width: 173px;
-  height: 40px;
+.swiper-button-prev {
+  left: 0;
 }
+/* .swiper-button-prev::after {
+  display: none;
+} */
+.swiper-button-next {
+  right: 0;
+}
+/* .swiper-button-next::after {
+  display: none;
+} */

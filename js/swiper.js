@@ -13,30 +13,69 @@ const hero_swiper = new Swiper('.hero__swiper', {
 });
 
 
-const galery_swiper = new Swiper('.galery__swiper', {
-  // Optional parameters
+let galery_swiper = new Swiper(".galery__swiper", {
+  slidesPerView: 1,
   grid: {
-    rows: 2,
-    fill: 'row',
+    rows: 1,
+    fill: "row"
   },
-  slidesPerView: 3, // or 'auto'
-  spaceBetween: 50,
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
+  spaceBetween: 20,
   pagination: {
-    el: '.galery__pagination',
-    type: 'fraction',
+    el: ".galery__slider .galery__pagination",
+    type: "fraction"
+  },
+  navigation: {
+    nextEl: ".galery__button_next",
+    prevEl: ".galery__button_prev"
   },
 
-  autoplay: {
-      delay: 6000,
-      waitForTransition: true,
+  breakpoints: {
+    441: {
+      slidesPerView: 2,
+      grid: {
+        rows: 2
+      },
+      spaceBetween: 30
+    },
+
+    1200: {
+      slidesPerView: 3,
+      grid: {
+        rows: 2
+      },
+      spaceBetween: 50
+    }
   },
+
+  a11y: false,
 });
+
+
+
+// const galery_swiper = new Swiper('.galery__swiper', {
+//   // Optional parameters
+//   grid: {
+//     rows: 2,
+//     fill: 'row',
+//   },
+//   slidesPerView: 3, // or 'auto'
+//   spaceBetween: 50,
+
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+
+//   pagination: {
+//     el: '.galery__pagination',
+//     type: 'fraction',
+//   },
+
+//   autoplay: {
+//       delay: 6000,
+//       waitForTransition: true,
+//   },
+// });
 
 
 const editions_swiper = new Swiper('.editions__swiper', {

@@ -116,18 +116,3 @@
   filter: none;
 }
 
-.projects__btn_prev {
-  left: 0;
-  background: url('../img/projects_arrow-left.svg') no-repeat center/contain;
-}
-.projects__btn_prev::after {
-  display: none;
-}
-.projects__btn_next {
-  right: 0;
-  background: url('../img/projects_arrow-right.svg') no-repeat center/contain;
-}
-.projects__btn_next::after {
-  display: none;
-}
-}
