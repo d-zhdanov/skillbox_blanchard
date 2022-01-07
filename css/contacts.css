@@ -9,7 +9,7 @@
 
 .contacts__container {
   height: 700px;
-  display: flex;
+  position: relative;
 }
 
 .contacts__feedback {
@@ -19,12 +19,8 @@
   display: flex;
   flex-direction: column;
 }
-.contacts__container::before {
-  content: '';
-  flex: 0 11 160px;
-}
 
-.contacts__title_room {
+.contacts__title-room {
   margin-bottom: 5px;
   padding-top: 122px;
   font-weight: 600;
@@ -44,7 +40,7 @@
   line-height: 32px;
 }
 
-.contacts__form_input {
+.contacts__form-input {
   width: 400px;
   height: 41px;
   padding-left: 24px;
@@ -52,13 +48,13 @@
   border: 1px solid #333;
   border-radius: 100px;
 }
-.contacts__form_input::placeholder {
+.contacts__form-input::placeholder {
   font-size: 16px;
   line-height: 32px;
   color: #999;
 }
 
-.contacts__form_btn {
+.contacts__form-btn {
   width: 157px;
   height: 59px;
   margin-top: 4px;
@@ -74,7 +70,7 @@
   border-radius: 100px;
 }
 
-.contacts__title_social {
+.contacts__title-social {
   margin-bottom: 17px;
   font-weight: 400;
   font-size: 24px;
@@ -82,7 +78,9 @@
 }
 
 .contacts__map {
-  flex: 1 1 1%;
+  position: absolute;
+  left: 520px;
+  top: 0;
   width: 100%;
   height: 100%;
 }

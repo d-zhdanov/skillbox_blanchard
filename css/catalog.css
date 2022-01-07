@@ -11,7 +11,7 @@
   margin-bottom: 13px;
 }
 
-.catalog__btn_list {
+.catalog__btn-list {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -19,7 +19,7 @@
   height: 66px;
 }
 
-.catalog__btn_item {
+.catalog__btn-item {
   display: inline-block;
   margin-right: 50px;
 }
@@ -48,7 +48,7 @@
   background-image: url('../img/catalog_ico-bel.svg');
 }
 
-.catalog__btn_active::after {
+.catalog__btn-active::after {
   content: '';
   position: absolute;
   left: -10px;
@@ -72,12 +72,12 @@
   display: none;
   justify-content: space-between;
 }
-.catalog__item_active {
+.catalog__item-active {
   display: flex;
-  animation: catalog__item_appear .6s;
+  animation: catalog__item-appear .6s;
 }
 
-@keyframes catalog__item_appear {
+@keyframes catalog__item-appear {
   from {
     opacity: 0;
   }
@@ -96,7 +96,7 @@
   display: none;
   flex: 0 1 750px;
 }
-.catalog__painter_active {
+.catalog__painter-active {
   display: block;
 }
 
@@ -105,18 +105,18 @@
   margin-bottom: 27px;
 }
 
-.catalog__painters_item:not(:first-child) {
+.catalog__painters-item:not(:first-child) {
   margin-top: -1px;
 }
 
-.catalog__item_title {
+.catalog__item-title {
   margin-bottom: 5px;
   font-weight: 600;
   font-size: 24px;
   line-height: 33px;
 }
 
-.catalog__item_lived {
+.catalog__item-lived {
   display: inline-block;
   margin-bottom: 6px;
   color: #999;
@@ -124,7 +124,7 @@
   line-height: 16px;
 }
 
-.catalog__item_desc {
+.catalog__item-desc {
   max-width: 749px;
   font-size: 16px;
   line-height: 32px;
@@ -135,13 +135,13 @@
   flex: 0 1 800px;
 }
 
-.catalog__painters_years {
+.catalog__painters-years {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
 }
 
-.catalog__painters_btn {
+.catalog__painters-btn {
   height: 116px;
   width: 100%;
   display: flex;
@@ -152,37 +152,37 @@
   border-color: #CACACA;
   transition: .7s;
 }
-.catalog__painters_btn-active {
+.catalog__painters-btn-active {
   border-color: #7943A4;
 }
-.catalog__painters_btn:after {
+.catalog__painters-btn:after {
   content: '';
   height: 50px;
   width: 50px;
   background: url('../img/catalog_button.svg') no-repeat right / contain;
 }
-.catalog__painters_btn-active:after {
+.catalog__painters-btn-active:after {
   content: '';
   height: 50px;
   width: 50px;
   background: url('../img/catalog_button-active.svg') no-repeat right / contain;
 }
 
-.catalog__painters_list {
+.catalog__painters-list {
   max-height: 0;
   display: none;
   flex-flow: column wrap;
   align-content: flex-start;
 }
 
-.catalog__painters_list-active {
+.catalog__painters-list-active {
   max-height: 288px;
   display: flex;
   margin: 26px 0;
-  animation: catalog__painters_appear .5s;
+  animation: catalog__painters-appear .5s;
 }
 
-@keyframes catalog__painters_appear {
+@keyframes catalog__painters-appear {
   from {
     opacity: 0;
     height: 0;
@@ -198,13 +198,14 @@
   }
 }
 
-.catalog__painter_name {
+.catalog__painter-name {
   margin-right: 60px;
   font-size: 16px;
   line-height: 32px;
+  cursor: pointer;
 }
 
-.catalog__item_link {
+.catalog__item-link {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
@@ -214,7 +215,7 @@
 
 
 /* Default Init */
-.catalog__painter_isempty {
+.catalog__painter-isempty {
   margin: 25px 0;
   padding-left: 299px;
   position: relative;
@@ -223,7 +224,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.catalog__painter_isempty::before {
+.catalog__painter-isempty::before {
   content: '';
   position: absolute;
   left: 12px;
@@ -232,7 +233,7 @@
   height: 165px;
   background-color: #B7B7B7;
 }
-.catalog__painter_isempty::after {
+.catalog__painter-isempty::after {
   content: '';
   position: absolute;
   left: 0;
@@ -242,19 +243,19 @@
   border: 2px solid #B7B7B7;
 }
 
-.catalog__painter_isempty-title {
+.catalog__painter-isempty-title {
   margin-bottom: 5px;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
 }
-.catalog__painter_isempty-desc {
+.catalog__painter-isempty-desc {
   margin-bottom: 5px;
   max-width: 275px;
   font-size: 16px;
   line-height: 22px;
 }
-.catalog__painter_isempty-link {
+.catalog__painter-isempty-link {
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;

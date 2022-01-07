@@ -6,7 +6,7 @@
   z-index: 2;
 }
 
-.header_logo {
+.header__logo {
   margin-right: 180px;
 }
 
@@ -97,7 +97,7 @@
   transition-timing-function: ease-in-out;
   z-index: -1;
 }
-.header__login_img {
+.header__login-img {
   width: 13px;
   height: 13px;
   margin-right: 2px;
@@ -139,7 +139,7 @@
   margin-right: 96px;
 }
 
-.filter__button {
+.search__button {
   color: white;
   position: relative;
   font-size: 18px;
@@ -148,7 +148,7 @@
   transition-duration: .3s;
   transition-timing-function: ease-in-out;
 }
-.filter__button::before {
+.search__button::before {
   content: '';
   position: absolute;
   left: -5px;
@@ -161,30 +161,30 @@
   transition-timing-function: ease-in-out;
   z-index: -1;
 }
-.header__filter_img {
+.search__button-img {
   width: 12px;
   height: 7px;
   stroke: currentColor;
   fill: none;
   transition: transform .1s ease-in-out;
 }
-.filter__button:hover {
+.search__button:hover {
   color: #9D5CD0;
 }
-.filter__button:focus {
+.search__button:focus {
   color: white;
 }
-.filter__button:focus::before {
+.search__button:focus::before {
   background-color: #7943A4;
 }
-.filter__button:active {
+.search__button:active {
   color: #7943A4;
   background-color: transparent;
 }
-.filter__button:active::before {
+.search__button:active::before {
   background-color: transparent;
 }
-.filter__button:active .header__filter_img {
+.search__button:active .search__button-img {
   transform: rotate(180deg);
 }
 

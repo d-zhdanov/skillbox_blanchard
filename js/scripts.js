@@ -1,4 +1,43 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+  // Main menu. Smooth move
+  const anchors = document.querySelectorAll('a[href*="##"]');
+
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const blockID = anchor.getAttribute('href').substring(2);
+      console.log(blockID);
+      document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    })
+  }
+
+
+  // document.querySelectorAll('a[href^="#"]').forEach(link => {
+  //   link.addEventListener('click', function(e) {
+  //     e.preventDefault();
+
+  //     let href = this.getAttribute('href').substring(1);
+  //     const scrollTarget = document.getElementById(href);
+  //     // const topOffset = document.querySelector('.scrollto').offsetHeight;
+  //     const topOffset = 0; // если не нужен отступ сверху
+  //     const elementPosition = scrollTarget.getBoundingClientRect().top;
+  //     const offsetPosition = elementPosition - topOffset;
+
+  //     window.scrollBy({
+  //       top: offsetPosition,
+  //       behavior: "smooth"
+  //     });
+  //   });
+  // });
+
+
+
+
   // Galery. Filter
   const galery_filter = document.querySelector('#galery__filter');
   const choices = new Choices(galery_filter, {
@@ -13,46 +52,46 @@ document.addEventListener('DOMContentLoaded', function() {
       const path = event.currentTarget.dataset.path;
 
       document.querySelectorAll('.catalog__btn').forEach(function(catalogTabItem) {
-        catalogTabItem.classList.remove('catalog__btn_active');
+        catalogTabItem.classList.remove('catalog__btn-active');
       });
 
       document.querySelectorAll('.catalog__item').forEach(function(catalogTabItem) {
-        catalogTabItem.classList.remove('catalog__item_active');
+        catalogTabItem.classList.remove('catalog__item-active');
       });
 
-      document.querySelector(`[data-path="${path}"]`).classList.add('catalog__btn_active');
-      document.querySelector(`[data-target="${path}"]`).classList.add('catalog__item_active');
+      document.querySelector(`[data-path="${path}"]`).classList.add('catalog__btn-active');
+      document.querySelector(`[data-target="${path}"]`).classList.add('catalog__item-active');
     });
   });
 
   // Каталог. Аккордион.
-  document.querySelectorAll('.catalog__painters_btn').forEach(function(catalogYearBtn) {
+  document.querySelectorAll('.catalog__painters-btn').forEach(function(catalogYearBtn) {
     catalogYearBtn.addEventListener('click', function (event) {
       const path = event.currentTarget.dataset.path;
 
-      document.querySelectorAll('.catalog__painters_btn-active').forEach(function(catalogYearItem) {
-        catalogYearItem.classList.remove('catalog__painters_btn-active');
+      document.querySelectorAll('.catalog__painters-btn-active').forEach(function(catalogYearItem) {
+        catalogYearItem.classList.remove('catalog__painters-btn-active');
       });
 
-      document.querySelectorAll('.catalog__painters_list-active').forEach(function(catalogYearItem) {
-        catalogYearItem.classList.remove('catalog__painters_list-active');
+      document.querySelectorAll('.catalog__painters-list-active').forEach(function(catalogYearItem) {
+        catalogYearItem.classList.remove('catalog__painters-list-active');
       });
 
-      document.querySelector(`[data-path="${path}"]`).classList.add('catalog__painters_btn-active');
-      document.querySelector(`[data-target="${path}"]`).classList.add('catalog__painters_list-active');
+      document.querySelector(`[data-path="${path}"]`).classList.add('catalog__painters-btn-active');
+      document.querySelector(`[data-target="${path}"]`).classList.add('catalog__painters-list-active');
     });
   });
 
   // Каталог. Выбор художника.
-  document.querySelectorAll('.catalog__painter_name').forEach(function(painterBtn) {
+  document.querySelectorAll('.catalog__painter-name').forEach(function(painterBtn) {
     painterBtn.addEventListener('click', function (event) {
       const path = event.currentTarget.dataset.path;
 
       document.querySelectorAll('.catalog__painter').forEach(function(painterItem) {
-        painterItem.classList.remove('catalog__painter_active');
+        painterItem.classList.remove('catalog__painter-active');
       });
 
-      document.querySelector(`[data-target="${path}"]`).classList.add('catalog__painter_active');
+      document.querySelector(`[data-target="${path}"]`).classList.add('catalog__painter-active');
     });
   });
 

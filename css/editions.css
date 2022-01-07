@@ -17,7 +17,7 @@
   justify-content: space-between;
 }
 
-.editions__filter_categories {
+.editions__filter-categories {
   display: inline-block;
   margin-bottom: 16px;
   font-weight: bold;
@@ -36,11 +36,11 @@
   margin-bottom: 16px;
 }
 
-.editions__check_box {
+.editions__check-box {
   display: none;
 }
 
-.editions__check_box ~ .editions__check_btn {
+.editions__check-box ~ .editions__check-btn {
   position: absolute;
   top: 50%;
   left: 0;
@@ -51,11 +51,11 @@
   transition: border-color .3s ease-in-out;
 }
 
-.editions__check_box:checked ~ .editions__check_btn {
+.editions__check-box:checked ~ .editions__check-btn {
   border-color: #C283F3;
 }
 
-.editions__check_box ~ .editions__check_btn::after {
+.editions__check-box ~ .editions__check-btn::after {
   content: '';
   position: absolute;
   left: 3px;
@@ -66,21 +66,21 @@
   transition: opacity .3s ease-in-out;
 }
 
-.editions__check_box:checked ~ .editions__check_btn::after {
+.editions__check-box:checked ~ .editions__check-btn::after {
   opacity: 1;
 }
 
-.editions__check_box:checked ~ .editions__check_label {
+.editions__check-box:checked ~ .editions__check-label {
   color: #C283F3;
 }
 
-.editions__filter_prices {
+.editions__filter-prices {
   display: block;
   padding-top: 26px;
   margin-bottom: 15px;
 }
 
-.editions__filter_price-label {
+.editions__filter-price-label {
   display: flex;
   align-items: center;
   height: 38px;
@@ -88,20 +88,20 @@
   border-radius: 6px;
 }
 
-.editions__filter_label {
+.editions__filter-label {
   height: 100%;
 }
 
-.editions__filter_txt {
+.editions__filter-txt {
   display: inline-block;
   width: 36px;
   text-align: center;
 }
-.editions__filter_last-txt {
+.editions__filter-last-txt {
   width: 50px;
 }
 
-.editions__filter_price {
+.editions__filter-price {
   width: 73px;
   height: 100%;
   border: none;
@@ -190,30 +190,30 @@
   text-align: center;
 }
 
-.editions__slide_desc {
+.editions__slide-desc {
   display: block;
   font-size: 16px;
   line-height: 22px;
 }
 
-.editions__slide_name-price {
+.editions__slide-name-price {
   display: flex;
   justify-content: space-between;
 }
 
-.editions__slide_name {
+.editions__slide-name {
   font-weight: bold;
 }
 
-.editions__slide_price {
+.editions__slide-price {
   font-style: italic;
 }
 
-.editions__slide_author {
+.editions__slide-author {
   margin-bottom: 15px;
 }
 
-.editions__slide_btn {
+.editions__slide-btn {
   width: 116px;
   height: 36px;
   display: flex;

@@ -26,12 +26,12 @@
 .footer__social:not(:last-child) {
   margin-right: 20px;
 }
-.contacts__social_vk{
+.footer__social-vk{
   background-image: url('../img/footer_vk.svg');
 }
-.contacts__social_in{
+.footer__social-in{
   background-image: url('../img/footer_in.svg');
 }
-.contacts__social_fb{
+.footer__social-fb{
   background-image: url('../img/footer_fb.svg');
 }

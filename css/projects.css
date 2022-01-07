@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-.projects__tooltip_img {
+.projects__tooltip-img {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -44,7 +44,7 @@
   opacity: 0;
   transition: opacity .3s ease-in-out;
 }
-.projects__tooltip_img:hover + .projects__popup {
+.projects__tooltip-img:hover + .projects__popup {
   opacity: 1;
 }
 
@@ -84,7 +84,7 @@
 }
 
 
-.projects__partner_title {
+.projects__partner-title {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
