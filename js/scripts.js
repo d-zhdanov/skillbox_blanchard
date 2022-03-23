@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
 
   // Main menu. Smooth move
-  const anchors = document.querySelectorAll('a[href*="##"]');
+  const anchors = document.querySelectorAll('a[href*="#"]');
 
   for (let anchor of anchors) {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
 
-      const blockID = anchor.getAttribute('href').substring(2);
+      const blockID = anchor.getAttribute('href').substring(1);
       console.log(blockID);
       document.getElementById(blockID).scrollIntoView({
         behavior: 'smooth',
@@ -107,14 +107,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Projects. Tooltippy
+  tippy('.js-tooltip-btn', {
+    theme: 'amethyst',
+    maxWidth: 264,
+  });
+
+
   // Contacts
   ymaps.ready(init);
   function init(){
     var myMap = new ymaps.Map("contacts__map", {
       center: [55.76, 37.64],
-      zoom: 15
-    });
+      zoom: 15,
+      controls: ['zoomControl', 'geolocationControl'],
+    })
   };
+
 
   var selector = document.querySelector("input[type='tel']");
   var im = new Inputmask("+7 (999)-999-99-99");

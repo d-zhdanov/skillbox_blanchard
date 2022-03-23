@@ -1,7 +1,19 @@
 /* Section Hero */
 .hero__container {
-  height: 760px;
+  position: relative;
+  /* height: 760px; */
+  min-height: 760px;
+  height: 100%;
   color: white;
+}
+
+.hero__swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
 .hero__wrapper {
@@ -20,12 +32,10 @@
 }
 
 .hero__text {
-  position: absolute;
-  top: 0;
   width: 100%;
   height: 100%;
   padding-top: 201px;
-  z-index: 3;
+  padding-bottom: 10px;
 }
 
 .hero__title {
@@ -79,9 +89,9 @@
   border-color: transparent;
   transition: border-color .3s ease-in-out;
 }
-.hero__button:focus::before {
+/* .hero__button:focus::before {
   border-color: white;
-}
+} */
 .hero__button::after {
   content: '';
   position: absolute;
