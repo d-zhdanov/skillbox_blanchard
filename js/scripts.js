@@ -120,7 +120,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var myMap = new ymaps.Map("contacts__map", {
       center: [55.76, 37.64],
       zoom: 15,
-      controls: ['zoomControl', 'geolocationControl'],
+      // controls: ['zoomControl', 'geolocationControl'],
+      controls: [],
     })
   };
 

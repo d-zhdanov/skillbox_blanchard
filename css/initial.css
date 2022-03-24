@@ -44,7 +44,10 @@
 
 
 /* Инициализация цветовой палитры */
-:root {}
+:root {
+  --desktop-width: 1920;
+  --tablet-width: 1024;
+}
 
 
 /* Инициализация html */
@@ -104,9 +107,10 @@ body {
 
  /* Глобальные определения */
 .container {
-  max-width: 1600px;
+  max-width: 1700px;
   margin-right: auto;
   margin-left: auto;
+  padding: 0 50px;
 }
 
 .text-center {

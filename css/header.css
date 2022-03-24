@@ -18,21 +18,22 @@
 .header__container {
   height: 100px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .nav {
   margin-right: auto;
+
 }
 
 .nav__list {
   display: flex;
   flex-wrap: wrap;
-  flex: 1 1 100%;
 }
 
-.nav__item:not(:last-child) {
-  margin-right: 56px;
+.nav__item {
+  margin-right: calc(56 / var(--desktop-width) * 100vw);
 }
 
 .nav__link {
@@ -78,6 +79,7 @@
 
 .header__login {
   display: block;
+  flex-shrink: 0;
   position: relative;
   font-size: 18px;
   line-height: 25px;
@@ -144,7 +146,7 @@
   display: flex;
 }
 .search__item:not(:last-child) {
-  margin-right: 96px;
+  margin-right: calc(96 / var(--desktop-width) * 100vw);
 }
 
 .search__button {
@@ -159,10 +161,14 @@
 .search__button::before {
   content: '';
   position: absolute;
-  left: -5px;
+  /* left: -5px;
   top: -5px;
   right: -5px;
-  bottom: -5px;
+  bottom: -5px; */
+  top: 0;
+  right: -5px;
+  bottom: 0;
+  left: -5px;
   background-color: transparent;
   transition-property: background-color;
   transition-duration: .3s;
@@ -376,4 +382,100 @@
   bottom: 40px; */
   margin-right: 19px;
   background-color: #000;
+}
+
+
+
+
+.burger {
+  display: none;
+  position: relative;
+  border: none;
+  padding: 0;
+  width: 36px;
+  height: 28px;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 4px;
+  background: #fff;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger::before {
+  top: 0;
+  width: 100%;
+}
+
+.burger::after {
+  top: calc(100% - 4px);
+  width: 65%;
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 80%;
+  height: 4px;
+  background: #fff;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger--active::before {
+  top: 50%;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger--active::after {
+  top: 50%;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger--active .burger__line {
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+.search__small-btn {
+  display: none;
+}
+
+@media (max-width: 1365px) {
+  .burger,
+  .search__small-btn {
+    display: block;
+  }
+
+  .search__small-btn,
+  .search__form-button-img {
+    width: 30px;
+    height: 29px;
+  }
+
+  .nav,
+  .header__login,
+  .search {
+    display: none;
+  }
+
+  .logo {
+    width: 187px;
+    height: 42px;
+  }
+  .header__logo {
+    margin-right: 0;
+  }
 }

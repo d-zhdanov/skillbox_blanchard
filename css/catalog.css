@@ -93,7 +93,9 @@
 
 .catalog__painter {
   display: none;
-  flex: 0 1 750px;
+  /* flex: 0 1 750px; */
+  /* flex: 0 1 calc(750 / var(--desktop-width) * 100vw); */
+  flex: 0 1 46.8%;
 }
 .catalog__painter-active {
   display: block;
@@ -101,7 +103,7 @@
 }
 
 .catalog__img {
-  max-width: 750px;
+  width: 100%;
   margin-bottom: 27px;
 }
 
@@ -132,7 +134,9 @@
 
 
 .catalog__painters {
-  flex: 0 1 800px;
+  /* flex: 0 1 800px; */
+  /* flex: 0 1 calc(800 / var(--desktop-width) * 100vw); */
+  flex: 0 1 50%;
 }
 
 .catalog__painters-years {
@@ -310,5 +314,29 @@
   to {
     opacity: 1;
     transform: scaleY(1);
+  }
+}
+
+
+
+@media (max-width: 1365px) {
+  .catalog__painters-list {
+    column-count: 2;
+  }
+
+  .catalog__title {
+    margin-right: 43px;
+  }
+
+  .catalog__btn-list {
+    transform: translateY(8px);
+  }
+
+  .catalog__painter {
+    flex: 0 1 47.2%;
+  }
+
+  .catalog__painters {
+    flex: 0 1 47.3%;
   }
 }

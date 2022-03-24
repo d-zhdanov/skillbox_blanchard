@@ -34,3 +34,13 @@
 .footer__social-link:active > .footer__social-icon {
   color: #9D5CD0;
 }
+
+
+
+
+@media (max-width: 1365px) {
+  .footer__social-icon {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -116,3 +116,24 @@
 .hero__button:active::after {
   border-color: transparent;
 }
+
+
+
+@media (max-width: 1365px) {
+  .hero__container {
+    min-height: 728px;
+  }
+
+  .hero__text {
+    padding-top: 173px;
+  }
+
+  .hero__title {
+    margin-bottom: 11px;
+  }
+
+  .hero__desc {
+    max-width: 663px;
+    margin-bottom: 133px;
+  }
+}

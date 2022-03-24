@@ -35,10 +35,10 @@ let galery_swiper = new Swiper(".galery__swiper", {
       grid: {
         rows: 2
       },
-      spaceBetween: 30
+      spaceBetween: 34
     },
 
-    1200: {
+    1366: {
       slidesPerView: 3,
       grid: {
         rows: 2
@@ -53,12 +53,6 @@ let galery_swiper = new Swiper(".galery__swiper", {
 
 
 const editions_swiper = new Swiper('.editions__swiper', {
-  // Optional parameters
-  // loop: true,
-  slidesPerView: 3, // or 'auto'
-  // grabCursor: true,
-  spaceBetween: 50,
-
   navigation: {
     nextEl: '.editions__button_next',
     prevEl: '.editions__button_prev',
@@ -69,6 +63,24 @@ const editions_swiper = new Swiper('.editions__swiper', {
     type: 'fraction',
   },
 
+  breakpoints: {
+    441: {
+      slidesPerView: 2,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 49
+    },
+
+    1366: {
+      slidesPerView: 3,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 50
+    }
+  },
+
   autoplay: {
       delay: 6000,
       waitForTransition: true,
@@ -77,12 +89,6 @@ const editions_swiper = new Swiper('.editions__swiper', {
 
 
 const projects_swiper = new Swiper('.projects__swiper', {
-  // Optional parameters
-  // loop: true,
-  slidesPerView: 3, // or 'auto'
-  // grabCursor: true,
-  spaceBetween: 50,
-
   navigation: {
     nextEl: '.projects__button_next',
     prevEl: '.projects__button_prev',
@@ -92,6 +98,24 @@ const projects_swiper = new Swiper('.projects__swiper', {
   //   el: '.projects__pagination',
   //   type: 'fraction',
   // },
+
+  breakpoints: {
+    441: {
+      slidesPerView: 2,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 50
+    },
+
+    1366: {
+      slidesPerView: 3,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 50
+    }
+  },
 
   autoplay: {
       delay: 6000,
