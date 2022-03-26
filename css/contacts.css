@@ -186,3 +186,15 @@
     margin-right: 30px;
   }
 }
+
+
+
+
+@media (max-width: 860px) {
+  .contacts__feedback {
+    width: calc(380 / var(--mobile-width) * 100vw);
+  }
+  .contacts__map {
+    width: calc(340 / var(--mobile-width) * 100vw);
+  }
+}

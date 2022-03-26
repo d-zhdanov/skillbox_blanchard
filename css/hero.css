@@ -137,3 +137,53 @@
     margin-bottom: 133px;
   }
 }
+
+
+
+@media (max-width: 650px) {
+  .hero__container {
+    min-height: 329px;
+  }
+
+  .hero__text {
+    padding-top: 53px;
+  }
+
+  .hero__text > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__title {
+    font-size: 32px;
+    line-height: 36.8px;
+    text-align: center;
+  }
+
+  .hero__desc {
+    margin-bottom: 58px;
+    font-size: 12px;
+    line-height: 16.34px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .hero__button {
+    width: 200px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 16.34px;
+  }
+
+  .hero__button::before {
+    width: 206px;
+    height: 46px;
+  }
+
+  .hero__button::after {
+    width: 210px;
+    height: 50px;
+  }
+
+}

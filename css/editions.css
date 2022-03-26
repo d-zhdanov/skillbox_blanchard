@@ -282,3 +282,40 @@
     margin-bottom: 6px;
   }
 }
+
+
+
+@media (max-width: 860px) {
+  .editions {
+    padding-bottom: 77px;
+  }
+
+  .editions__container {
+    flex-wrap: wrap;
+  }
+
+  .editions__filter {
+    width: 100%;
+  }
+
+  .editions__slider {
+    width: 100%;
+  }
+
+  .editions__checkbox {
+    column-count: 3;
+    margin-bottom: 25px;
+  }
+
+  .editions__slide {
+    width: calc(290 / var(--mobile-width) * 100vw);
+  }
+
+  .editions__filter-category {
+    margin-bottom: 28px;
+  }
+
+  .editions__filter-price-label {
+    width: fit-content;
+  }
+}

@@ -226,3 +226,26 @@
     height: calc(128 / var(--tablet-width) * 100vw);
   }
 }
+
+
+
+@media (max-width: 860px) {
+  .projects__text {
+    margin-bottom: 25px;
+  }
+
+  .projects__swiper,
+  .projects__wrapper {
+    width: calc(562 / var(--mobile-width) * 100vw);
+  }
+
+  .projects_swiper-link,
+  .projects__img {
+    width: calc(264 / var(--mobile-width) * 100vw);
+    height: calc(106 / var(--mobile-width) * 100vw);
+  }
+
+  .projects__partner-title {
+    margin-bottom: 11px;
+  }
+}

@@ -21,7 +21,7 @@ let galery_swiper = new Swiper(".galery__swiper", {
   },
   spaceBetween: 20,
   pagination: {
-    el: ".galery__slider .galery__pagination",
+    el: ".galery__pagination",
     type: "fraction"
   },
   navigation: {
@@ -30,7 +30,7 @@ let galery_swiper = new Swiper(".galery__swiper", {
   },
 
   breakpoints: {
-    441: {
+    650: {
       slidesPerView: 2,
       grid: {
         rows: 2
@@ -64,7 +64,15 @@ const editions_swiper = new Swiper('.editions__swiper', {
   },
 
   breakpoints: {
-    441: {
+    320: {
+      slidesPerView: 2,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 34
+    },
+
+    860: {
       slidesPerView: 2,
       grid: {
         rows: 1
@@ -100,7 +108,15 @@ const projects_swiper = new Swiper('.projects__swiper', {
   // },
 
   breakpoints: {
-    441: {
+    320: {
+      slidesPerView: 2,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 34
+    },
+
+    860: {
       slidesPerView: 2,
       grid: {
         rows: 1

@@ -47,6 +47,10 @@
 :root {
   --desktop-width: 1920;
   --tablet-width: 1024;
+  --mobile-width: 768;
+  --min-width: 320;
+
+  --burger-line-height: 4px;
 }
 
 
@@ -161,3 +165,30 @@ body {
 /* .swiper-button-next::after {
   display: none;
 } */
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+
+
+
+@media (max-width: 650px) {
+  :root {
+    --burger-line-height: 2px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}

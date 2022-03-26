@@ -99,11 +99,15 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.events__more').forEach(function(painterBtn) {
     painterBtn.addEventListener('click', function (event) {
 
-      document.querySelectorAll('.events__item_disabled').forEach(function(painterItem) {
-        painterItem.classList.remove('events__item_disabled');
+      document.querySelectorAll('.events__list').forEach(function(painterItem) {
+        painterItem.classList.add('flex-wrap');
       });
 
-      painterBtn.classList.add('events__item_disabled');
+      document.querySelectorAll('.events__item').forEach(function(painterItem) {
+        painterItem.style.display = 'block';
+      });
+
+      painterBtn.style.display = 'none';
     });
   });
 
