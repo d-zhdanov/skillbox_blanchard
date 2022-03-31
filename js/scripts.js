@@ -36,6 +36,53 @@ document.addEventListener('DOMContentLoaded', function() {
   // });
 
 
+  // Подменю. Выпадающее меню
+  const params = {
+    btnClassName: "js-header-dropdown-btn",
+    dropClassName: "js-header-drop",
+    activeClassName: "is-active",
+    disabledClassName: "is-disabled"
+  }
+
+  function onDisable(evt) {
+    if (evt.target.classList.contains(params.disabledClassName)) {
+      evt.target.classList.remove(params.disabledClassName, params.activeClassName);
+      evt.target.removeEventListener("animationend", onDisable);
+    }
+  }
+
+  function setMenuListener() {
+    document.body.addEventListener("click", (evt) => {
+      const activeElements = document.querySelectorAll(`.${params.btnClassName}.${params.activeClassName}, .${params.dropClassName}.${params.activeClassName}`);
+
+      if (activeElements.length && !evt.target.closest(`.${params.activeClassName}`)) {
+        activeElements.forEach((current) => {
+          if (current.classList.contains(params.btnClassName)) {
+            current.classList.remove(params.activeClassName);
+          } else {
+            current.classList.add(params.disabledClassName);
+          }
+        });
+      }
+
+      if (evt.target.closest(`.${params.btnClassName}`)) {
+        const btn = evt.target.closest(`.${params.btnClassName}`);
+        const path = btn.dataset.path;
+        const drop = document.querySelector(`.${params.dropClassName}[data-target="${path}"]`);
+
+        btn.classList.toggle(params.activeClassName);
+
+        if (!drop.classList.contains(params.activeClassName)) {
+          drop.classList.add(params.activeClassName);
+          drop.addEventListener("animationend", onDisable);
+        } else {
+          drop.classList.add(params.disabledClassName);
+        }
+      }
+    });
+  }
+
+  setMenuListener();
 
 
   // Galery. Filter
@@ -92,22 +139,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       document.querySelector(`[data-target="${path}"]`).classList.add('catalog__painter-active');
-    });
-  });
-
-  // Events. More cards
-  document.querySelectorAll('.events__more').forEach(function(painterBtn) {
-    painterBtn.addEventListener('click', function (event) {
-
-      document.querySelectorAll('.events__list').forEach(function(painterItem) {
-        painterItem.classList.add('flex-wrap');
-      });
-
-      document.querySelectorAll('.events__item').forEach(function(painterItem) {
-        painterItem.style.display = 'block';
-      });
-
-      painterBtn.style.display = 'none';
     });
   });
 

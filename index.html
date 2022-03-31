@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <link rel="stylesheet" href="css/graph-modal.min.css">
   <link rel="stylesheet" href="css/style.css">
 
 
@@ -29,6 +30,8 @@
   <script src="https://unpkg.com/@popperjs/core@2" defer></script>
   <script src="https://unpkg.com/tippy.js@6" defer></script>
 
+  <script src="js/burger.js" defer></script>
+  <script src="js/galery_modal.js" defer></script>
   <script src="js/scripts.js" defer></script>
 
   <title>Blanchard - художественная галерея</title>
@@ -42,44 +45,44 @@
           <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
             <span class="burger__line"></span>
           </button>
-          <a class="header__logo" href="#">
+          <a class="header__logo">
             <svg class="logo" aria-label="Логотип Blanchard">
               <use xlink:href="#login" />
             </svg>
           </a>
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item">
+          <nav class="nav" data-menu-overlay data-menu>
+            <ul class="nav__list" >
+              <li class="nav__item" data-menu-item>
                 <a href="#AboutUs" class="nav__link">О&nbsp;нас</a>
               </li>
-              <li class="nav__item">
+              <li class="nav__item" data-menu-item>
                 <a href="#Galery" class="nav__link">Галерея</a>
               </li>
-              <li class="nav__item">
+              <li class="nav__item" data-menu-item>
                 <a href="#Catalog" class="nav__link">Каталог</a>
               </li>
-              <li class="nav__item">
+              <li class="nav__item" data-menu-item>
                 <a href="#Events" class="nav__link">События</a>
               </li>
-              <li class="nav__item">
+              <li class="nav__item" data-menu-item>
                 <a href="#Editions" class="nav__link">Издания</a>
               </li>
-              <li class="nav__item">
+              <li class="nav__item" data-menu-item>
                 <a href="#Projects" class="nav__link">Проекты</a>
               </li>
-              <li class="nav__item">
+              <li class="nav__item" data-menu-item>
                 <a href="#Contacts" class="nav__link">Контакты</a>
               </li>
             </ul>
           </nav>
-          <a href="#" class="header__login">
+          <a href="#" class="header__login" data-login>
             <svg class="header__login-img" aria-hidden="true">
               <use xlink:href="#header__login_img" />
             </svg>
             Войти
           </a>
-          <button class="btn search__small-btn" type="submit" aria-label="Искать">
-            <svg class="search__form-button-img" aria-hidden="true">
+          <button class="btn search-btn" type="submit" aria-label="Искать">
+            <svg class="search-btn__img" aria-hidden="true">
               <use xlink:href="#search__form-button-img" />
             </svg>
           </button>
@@ -91,77 +94,97 @@
         <div class="search__containter">
           <ul class="search__list">
             <li class="search__item">
-              <button class="btn search__button">
+              <button class="btn search__button js-header-dropdown-btn" data-path="one">
                 Реализм
                 <svg class="search__button-img" aria-hidden="true">
                   <use xlink:href="#search__button-img" />
                 </svg>
               </button>
-              <ul class="submenu" data-simplebar>
-                <li class="submenu__realism--1"><a href="#">Тинторетто</a></li>
-                <li class="submenu__realism--2"><a href="#">Фридрих</a></li>
-                <li class="submenu__realism--3"><a href="#">Леонардо</a></li>
-                <li class="submenu__realism--4"><a href="#">Верроккьо</a></li>
-                <li class="submenu__realism--4"><a href="#">Верроккьо</a></li>
-                <li class="submenu__realism--4"><a href="#">Верроккьо</a></li>
-              </ul>
+              <div class="submenu js-header-drop" data-target="one">
+                <div class="submenu__wrap" data-simplebar>
+                  <ul class="submenu__list">
+                    <li class="submenu__realism-1"><a href="#">Тинторетто</a></li>
+                    <li class="submenu__realism-2"><a href="#">Фридрих</a></li>
+                    <li class="submenu__realism-3"><a href="#">Леонардо</a></li>
+                    <li class="submenu__realism-4"><a href="#">Верроккьо</a></li>
+                    <li class="submenu__realism-4"><a href="#">Верроккьо</a></li>
+                    <li class="submenu__realism-4"><a href="#">Верроккьо</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
             <li class="search__item">
-              <button class="btn search__button">
+              <button class="btn search__button js-header-dropdown-btn" data-path="two">
                 Импрессионизм
                 <svg class="search__button-img" aria-hidden="true">
                   <use xlink:href="#search__button-img" />
                 </svg>
               </button>
-              <ul class="submenu" data-simplebar>
-                <li class="submenu__impressionism--1"><a href="#">Моне</a></li>
-                <li class="submenu__impressionism--2"><a href="#">Сислей</a></li>
-                <li class="submenu__impressionism--3"><a href="#">Мане</a></li>
-                <li class="submenu__impressionism--4"><a href="#">Ренуар</a></li>
-                <li class="submenu__impressionism--4"><a href="#">Ренуар</a></li>
-              </ul>
+              <div class="submenu js-header-drop" data-target="two">
+                <div class="submenu__wrap" data-simplebar>
+                  <ul class="submenu__list">
+                    <li class="submenu__impressionism-1"><a href="#">Моне</a></li>
+                    <li class="submenu__impressionism-2"><a href="#">Сислей</a></li>
+                    <li class="submenu__impressionism-3"><a href="#">Мане</a></li>
+                    <li class="submenu__impressionism-4"><a href="#">Ренуар</a></li>
+                    <li class="submenu__impressionism-4"><a href="#">Ренуар</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li class="search__item">
-              <button class="btn search__button">
+            <li class="search__item" >
+              <button class="btn search__button js-header-dropdown-btn" data-path="tree">
                 Постимпрессионизм
                 <svg class="search__button-img" aria-hidden="true">
                   <use xlink:href="#search__button-img" />
                 </svg>
               </button>
-              <ul class="submenu" data-simplebar>
-                <li class="submenu__postimpressionism--1"><a href="#">Ван Гог</a></li>
-                <li class="submenu__postimpressionism--2"><a href="#">Сезанн</a></li>
-                <li class="submenu__postimpressionism--3"><a href="#">Гоген</a></li>
-                <li class="submenu__postimpressionism--4"><a href="#">Сёра</a></li>
-              </ul>
+              <div class="submenu js-header-drop" data-target="tree">
+                <div class="submenu__wrap" data-simplebar>
+                  <ul class="submenu__list">
+                    <li class="submenu__postimpressionism-1"><a href="#">Ван Гог</a></li>
+                    <li class="submenu__postimpressionism-2"><a href="#">Сезанн</a></li>
+                    <li class="submenu__postimpressionism-3"><a href="#">Гоген</a></li>
+                    <li class="submenu__postimpressionism-4"><a href="#">Сёра</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li class="search__item">
-              <button class="btn search__button">
+            <li class="search__item" >
+              <button class="btn search__button js-header-dropdown-btn" data-path="four">
                 Авангард
                 <svg class="search__button-img" aria-hidden="true">
                   <use xlink:href="#search__button-img" />
                 </svg>
               </button>
-              <ul class="submenu" data-simplebar>
-                <li class="submenu__avangard--1"><a href="#">Кандинский</a></li>
-                <li class="submenu__avangard--2"><a href="#">Маринетти</a></li>
-                <li class="submenu__avangard--3"><a href="#">Малевич</a></li>
-                <li class="submenu__avangard--4"><a href="#">Пикассо</a></li>
-              </ul>
+              <div class="submenu js-header-drop" data-target="four">
+                <div class="submenu__wrap" data-simplebar>
+                  <ul class="submenu__list">
+                    <li class="submenu__avangard-1"><a href="#">Кандинский</a></li>
+                    <li class="submenu__avangard-2"><a href="#">Маринетти</a></li>
+                    <li class="submenu__avangard-3"><a href="#">Малевич</a></li>
+                    <li class="submenu__avangard-4"><a href="#">Пикассо</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
-            <li class="search__item">
-              <button class="btn search__button">
+            <li class="search__item" >
+              <button class="btn search__button js-header-dropdown-btn" data-path="five">
                 Футуризм
                 <svg class="search__button-img" aria-hidden="true">
                   <use xlink:href="#search__button-img" />
                 </svg>
               </button>
-              <ul class="submenu" data-simplebar>
-                <li class="submenu__futurism--1"><a href="#">Карра</a></li>
-                <li class="submenu__futurism--2"><a href="#">Прателла</a></li>
-                <li class="submenu__futurism--3"><a href="#">Северини</a></li>
-                <li class="submenu__futurism--4"><a href="#">Балла</a></li>
-              </ul>
+              <div class="submenu js-header-drop" data-target="five">
+                <div class="submenu__wrap" data-simplebar>
+                  <ul class="submenu__list">
+                    <li class="submenu__futurism-1"><a href="#">Карра</a></li>
+                    <li class="submenu__futurism-2"><a href="#">Прателла</a></li>
+                    <li class="submenu__futurism-3"><a href="#">Северини</a></li>
+                    <li class="submenu__futurism-4"><a href="#">Балла</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
           </ul>
           <form class="search__form" action="#" method="POST">
@@ -230,149 +253,270 @@
             <div class="galery__slider">
               <div class="swiper galery__swiper">
                 <div class="swiper-wrapper galery__wrapper">
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/01_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/01.jpg" alt="Картина01">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/02_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/02.jpg" alt="Картина02">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/03_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/03.jpg" alt="Картина03">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/04_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/04.jpg" alt="Картина04">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/05_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/05.jpg" alt="Картина05">
-                    </picture>
-                  </a><a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/06_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/06.jpg" alt="Картина06">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/07_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/07.jpg" alt="Картина07">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/08_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/08.jpg" alt="Картина08">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/09_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/09.jpg" alt="Картина09">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/10_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/10.jpg" alt="Картина10">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/11_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/11.jpg" alt="Картина11">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/12_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/12.jpg" alt="Картина12">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/13_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/13.jpg" alt="Картина13">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/14_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/14.jpg" alt="Картина14">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/15_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/15.jpg" alt="Картина15">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/16_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/16.jpg" alt="Картина16">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/17_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/17.jpg" alt="Картина17">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/18_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/18.jpg" alt="Картина18">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/19_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/19.jpg" alt="Картина19">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/20_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/20.jpg" alt="Картина20">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/21_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/21.jpg" alt="Картина21">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/22_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/22.jpg" alt="Картина22">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/23_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/23.jpg" alt="Картина23">
-                    </picture>
-                  </a>
-                  <a class="swiper-slide galery__slide" href="#">
-                    <picture>
-                      <source srcset="images/galery/24_2x.jpg" media="(min-width: 1024px)">
-                      <img class="galery__image" src="images/galery/24.jpg" alt="Картина24">
-                    </picture>
-                  </a>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/01.jpg" srcset="./images/galery/01@2x.jpg 2x" loading="lazy" alt="Картина01">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">Казимир Малевич</h3>
+                        <span class="g-cap__name">“Женщина с граблями”</span>
+                        <span class="g-cap__created">1931-1932</span>
+                        <p class="g-cap__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/02.jpg" srcset="./images/galery/02@2x.jpg 2x" loading="lazy" alt="Картина02">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/03.jpg" srcset="./images/galery/03@2x.jpg 2x" loading="lazy" alt="Картина03">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/04.jpg" srcset="./images/galery/04@2x.jpg 2x" loading="lazy" alt="Картина04">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/05.jpg" srcset="./images/galery/05@2x.jpg 2x" loading="lazy" alt="Картина05">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/06.jpg" srcset="./images/galery/06@2x.jpg 2x" loading="lazy" alt="Картина06">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/07.jpg" srcset="./images/galery/07@2x.jpg 2x" loading="lazy" alt="Картина07">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/08.jpg" srcset="./images/galery/08@2x.jpg 2x" loading="lazy" alt="Картина08">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/09.jpg" srcset="./images/galery/09@2x.jpg 2x" loading="lazy" alt="Картина09">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/10.jpg" srcset="./images/galery/10@2x.jpg 2x" loading="lazy" alt="Картина10">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/11.jpg" srcset="./images/galery/11@2x.jpg 2x" loading="lazy" alt="Картина11">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/12.jpg" srcset="./images/galery/12@2x.jpg 2x" loading="lazy" alt="Картина12">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/13.jpg" srcset="./images/galery/13@2x.jpg 2x" loading="lazy" alt="Картина13">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/14.jpg" srcset="./images/galery/14@2x.jpg 2x" loading="lazy" alt="Картина14">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/15.jpg" srcset="./images/galery/15@2x.jpg 2x" loading="lazy" alt="Картина15">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/16.jpg" srcset="./images/galery/16@2x.jpg 2x" loading="lazy" alt="Картина16">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/17.jpg" srcset="./images/galery/17@2x.jpg 2x" loading="lazy" alt="Картина17">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/18.jpg" srcset="./images/galery/18@2x.jpg 2x" loading="lazy" alt="Картина18">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/19.jpg" srcset="./images/galery/19@2x.jpg 2x" loading="lazy" alt="Картина19">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/20.jpg" srcset="./images/galery/20@2x.jpg 2x" loading="lazy" alt="Картина20">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/21.jpg" srcset="./images/galery/21@2x.jpg 2x" loading="lazy" alt="Картина21">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/22.jpg" srcset="./images/galery/22@2x.jpg 2x" loading="lazy" alt="Картина22">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/23.jpg" srcset="./images/galery/23@2x.jpg 2x" loading="lazy" alt="Картина23">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
+                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                    <figure class="galery__figure">
+                      <img class="galery__image" src="./images/galery/24.jpg" srcset="./images/galery/24@2x.jpg 2x" loading="lazy" alt="Картина24">
+                      <figcaption class="galery__caption g-cap">
+                        <h3 class="g-cap__author">--Автор--</h3>
+                        <span class="g-cap__name">--Наименование--</span>
+                        <span class="g-cap__created">--год создания--</span>
+                        <p class="g-cap__desc">--описание--</p>
+                      </figcaption>
+                    </figure>
+                  </button>
                 </div>
               </div>
             </div>
@@ -907,86 +1051,93 @@
       </div>
     </section>
     <section class="section events" id="Events">
-      <div class="container">
+      <div class="container events__container">
         <h2 class="section-title events__title">События</h2>
-        <ul class="events__list">
-          <li class="events__item">
-            <article class="events__article">
-              <picture>
-                <source srcset="images/events/01_2x.jpg" media="(min-width: 1024px)">
-                <img class="events__article-img" src="images/events/01.jpg" alt="Книжная гравюра в живом восприятии">
-              </picture>
-              <div class="events__desc">
-                <span class="events__item-where">Музей им. Щусева</span>
-                <span class="events__item-when">с 20 марта по 30 апреля</span>
-                <h2 class="events__item-title">Книжная гравюра в живом восприятии</h2>
-                <p class="events__item-desc">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
-              </div>
-              <a href="#" class="events__item-link">Подробнее</a>
-            </article>
-          </li>
-          <li class="events__item">
-            <article class="events__article">
-              <picture>
-                <source srcset="images/events/02_2x.jpg" media="(min-width: 1024px)">
-                <img class="events__article-img" src="images/events/02.jpg" alt="«Открытая дискуссия». Дмитрий Петров и Сергей Ильин">
-              </picture>
-              <div class="events__desc">
-                <span class="events__item-where">ММОМА</span>
-                <span class="events__item-when">24 марта 19:00</span>
-                <h2 class="events__item-title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h2>
-                <p class="events__item-desc">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
-              </div>
-              <a href="#" class="events__item-link">Подробнее</a>
-            </article>
-          </li>
-          <li class="events__item">
-            <article class="events__article">
-              <picture>
-                <source srcset="images/events/03_2x.jpg" media="(min-width: 1024px)">
-                <img class="events__article-img" src="images/events/03.jpg" alt="Выставка «Формация 2020»">
-              </picture>
-              <div class="events__desc">
-                <span class="events__item-where">Еврейский музей</span>
-                <span class="events__item-when">с 31 марта по 21 апреля</span>
-                <h2 class="events__item-title">Выставка «Формация 2020»</h2>
-                <p class="events__item-desc">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
-              </div>
-              <a href="#" class="events__item-link">Подробнее</a>
-            </article>
-          </li>
-          <li class="events__item">
-            <article class="events__article">
-              <picture>
-                <source srcset="images/events/04_2x.jpg" media="(min-width: 1024px)">
-                <img class="events__article-img" src="images/events/04.jpg" alt="XXIV Международная биеннале молодого искусства">
-              </picture>
-              <div class="events__desc">
-                <span class="events__item-where">Третьяковка на Крымском валу</span>
-                <span class="events__item-when">с 30 марта по 30 апреля</span>
-                <h2 class="events__item-title">XXIV Международная биеннале молодого искусства</h2>
-                <p class="events__item-desc">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
-              </div>
-              <a href="#" class="events__item-link">Подробнее</a>
-            </article>
-          </li>
-          <li class="events__item">
-            <article class="events__article">
-              <picture>
-                <source srcset="images/events/05_2x.jpg" media="(min-width: 1024px)">
-                <img class="events__article-img" src="images/events/05.jpg" alt="Джон Винзор. Фотографии из серии «Метафора серебра»">
-              </picture>
-              <div class="events__desc">
-                <span class="events__item-where">ММАМ</span>
-                <span class="events__item-when">с 8 апреля по 20 мая</span>
-                <h2 class="events__item-title">Джон Винзор. Фотографии из серии «Метафора серебра»</h2>
-                <p class="events__item-desc">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
-              </div>
-              <a href="#" class="events__item-link">Подробнее</a>
-            </article>
-          </li>
-        </ul>
-        <button class="events__more">Все события</button>
+        <div class="events__navigation">
+          <button class="events__button events__button_prev" aria-label="К предыдущему слайду"></button>
+          <button class="events__button events__button_next" aria-label="К следующему слайду"></button>
+        </div>
+        <div class="swiper events__swiper">
+          <ul class="swiper-wrapper events__list">
+            <li class="swiper-slide events__item">
+              <article class="events__article">
+                <picture>
+                  <source srcset="images/events/01_2x.jpg" media="(min-width: 1024px)">
+                  <img class="events__article-img" src="images/events/01.jpg" alt="Книжная гравюра в живом восприятии">
+                </picture>
+                <div class="events__desc">
+                  <span class="events__item-where">Музей им. Щусева</span>
+                  <span class="events__item-when">с 20 марта по 30 апреля</span>
+                  <h2 class="events__item-title">Книжная гравюра в живом восприятии</h2>
+                  <p class="events__item-desc">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+                </div>
+                <a href="#" class="events__item-link">Подробнее</a>
+              </article>
+            </li>
+            <li class="swiper-slide events__item">
+              <article class="events__article">
+                <picture>
+                  <source srcset="images/events/02_2x.jpg" media="(min-width: 1024px)">
+                  <img class="events__article-img" src="images/events/02.jpg" alt="«Открытая дискуссия». Дмитрий Петров и Сергей Ильин">
+                </picture>
+                <div class="events__desc">
+                  <span class="events__item-where">ММОМА</span>
+                  <span class="events__item-when">24 марта 19:00</span>
+                  <h2 class="events__item-title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h2>
+                  <p class="events__item-desc">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
+                </div>
+                <a href="#" class="events__item-link">Подробнее</a>
+              </article>
+            </li>
+            <li class="swiper-slide events__item">
+              <article class="events__article">
+                <picture>
+                  <source srcset="images/events/03_2x.jpg" media="(min-width: 1024px)">
+                  <img class="events__article-img" src="images/events/03.jpg" alt="Выставка «Формация 2020»">
+                </picture>
+                <div class="events__desc">
+                  <span class="events__item-where">Еврейский музей</span>
+                  <span class="events__item-when">с 31 марта по 21 апреля</span>
+                  <h2 class="events__item-title">Выставка «Формация 2020»</h2>
+                  <p class="events__item-desc">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
+                </div>
+                <a href="#" class="events__item-link">Подробнее</a>
+              </article>
+            </li>
+            <li class="swiper-slide events__item">
+              <article class="events__article">
+                <picture>
+                  <source srcset="images/events/04_2x.jpg" media="(min-width: 1024px)">
+                  <img class="events__article-img" src="images/events/04.jpg" alt="XXIV Международная биеннале молодого искусства">
+                </picture>
+                <div class="events__desc">
+                  <span class="events__item-where">Третьяковка на Крымском валу</span>
+                  <span class="events__item-when">с 30 марта по 30 апреля</span>
+                  <h2 class="events__item-title">XXIV Международная биеннале молодого искусства</h2>
+                  <p class="events__item-desc">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
+                </div>
+                <a href="#" class="events__item-link">Подробнее</a>
+              </article>
+            </li>
+            <li class="swiper-slide events__item">
+              <article class="events__article">
+                <picture>
+                  <source srcset="images/events/05_2x.jpg" media="(min-width: 1024px)">
+                  <img class="events__article-img" src="images/events/05.jpg" alt="Джон Винзор. Фотографии из серии «Метафора серебра»">
+                </picture>
+                <div class="events__desc">
+                  <span class="events__item-where">ММАМ</span>
+                  <span class="events__item-when">с 8 апреля по 20 мая</span>
+                  <h2 class="events__item-title">Джон Винзор. Фотографии из серии «Метафора серебра»</h2>
+                  <p class="events__item-desc">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+                </div>
+                <a href="#" class="events__item-link">Подробнее</a>
+              </article>
+            </li>
+          </ul>
+          <div class="events__pagination"></div>
+        </div>
+        <!-- <button class="events__more">Все события</button> -->
       </div>
     </section>
     <section class="editions" id="Editions">
@@ -1207,34 +1358,34 @@
           </div>
           <div class="swiper projects__swiper">
             <div class="swiper-wrapper projects__wrapper">
-              <a class="swiper-slide projects_swiper-link" href="#">
+              <a class="swiper-slide projects__swiper-link" href="#">
                 <picture>
                   <source srcset="images/partners/1_2x.png" media="(min-width: 1024px)">
                   <img class="projects__img" src="images/partners/1.png" alt="Freelands Foundation">
                 </picture>
               </a>
-              <a class="swiper-slide projects_swiper-link" href="#">
+              <a class="swiper-slide projects__swiper-link" href="#">
                 <img class="projects__img" src="images/partners/2.png" alt="Institute for Comtemporary Art">
               </a>
-              <a class="swiper-slide projects_swiper-link" href="#">
+              <a class="swiper-slide projects__swiper-link" href="#">
                 <img class="projects__img" src="images/partners/3.png" alt="Workhouse">
               </a>
-              <a class="swiper-slide projects_swiper-link" href="#">
+              <a class="swiper-slide projects__swiper-link" href="#">
                 <img class="projects__img" src="images/partners/4.png" alt="1849">
               </a>
-              <a class="swiper-slide projects_swiper-link" href="#">
+              <a class="swiper-slide projects__swiper-link" href="#">
                 <img class="projects__img" src="images/partners/5.png" alt="Hiscox">
               </a>
-              <a class="swiper-slide projects_swiper-link" href="#">
+              <a class="swiper-slide projects__swiper-link" href="#">
                 <img class="projects__img" src="images/partners/6.png" alt="Camden">
               </a>
-              <a class="swiper-slide projects_swiper-link" href="#">
+              <a class="swiper-slide projects__swiper-link" href="#">
                 <img class="projects__img" src="images/partners/7.png" alt="Stassen">
               </a>
-              <a class="swiper-slide projects_swiper-link" href="#">
+              <a class="swiper-slide projects__swiper-link" href="#">
                 <img class="projects__img" src="images/partners/8.png" alt="Watts">
               </a>
-              <a class="swiper-slide projects_swiper-link" href="#">
+              <a class="swiper-slide projects__swiper-link" href="#">
                 <img class="projects__img" src="images/partners/9.png" alt="eSAD">
               </a>
             </div>
@@ -1293,21 +1444,21 @@
           </svg>
         </a>
         <ul class="footer__social-list">
-          <li class="footer_social-item">
+          <li class="footer__social-item">
             <a class="footer__social-link" href="#vk">
               <svg class="footer__social-icon" aria-hidden="true">
                 <use xlink:href="#icon__vkontakte" />
               </svg>
             </a>
           </li>
-          <li class="footer_social-item">
+          <li class="footer__social-item">
             <a class="footer__social-link" href="#">
               <svg class="footer__social-icon" aria-hidden="true">
                 <use xlink:href="#icon__instagram" />
               </svg>
             </a>
           </li>
-          <li class="footer_social-item">
+          <li class="footer__social-item">
             <a class="footer__social-link" href="#">
               <svg class="footer__social-icon" aria-hidden="true">
                 <use xlink:href="#icon__facebook" />
@@ -1318,6 +1469,7 @@
       </div>
     </div>
   </footer>
+  <div class="modal"></div>
 
   <svg class="visually-hidden" xmlns="http://www.w3.org/2000/svg">
     <symbol id="login" viewBox="0 0 173 40">
@@ -1375,7 +1527,7 @@
       <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05312 19.7889L20.7167 14.7649C26.271 12.4547 27.425 12.0534 28.1773 12.0402C28.3428 12.0373 28.7127 12.0783 28.9523 12.2727C29.1547 12.4369 29.2103 12.6587 29.237 12.8143C29.2636 12.9699 29.2968 13.3246 29.2704 13.6017C28.9694 16.7641 27.667 24.4386 27.0045 27.9806C26.7241 29.4794 26.1725 29.9819 25.6377 30.0311C24.4762 30.138 23.5943 29.2635 22.4694 28.5261L18.006 25.528C16.0314 24.2268 17.3114 23.5116 18.4368 22.3428C18.7313 22.0368 23.8486 17.3823 23.9476 16.96C23.9596 16.9072 23.9715 16.7104 23.8546 16.6064C23.7376 16.5024 23.565 16.5384 23.4404 16.5663C23.2639 16.6064 20.4519 18.465 15.0044 22.1423C14.2062 22.6904 13.4832 22.9575 12.8354 22.9435C12.1213 22.9281 10.7477 22.5397 9.72652 22.2078C8.474 21.8007 7.47852 21.5854 7.56524 20.8939C7.61036 20.5338 8.10632 20.1655 9.05308 19.789L9.05312 19.7889Z" fill="white"/>
       <defs>
       <linearGradient id="paint0_linear_57972_1461" x1="20" y1="0" x2="20" y2="39.7033" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2AABEE"/>
+      <stop offset="0" stop-color="#2AABEE"/>
       <stop offset="1" stop-color="#229ED9"/>
       </linearGradient>
       </defs>
