@@ -203,14 +203,14 @@
 }
 .catalog__painters-btn:hover:after {
   content: '';
-  height: 50px;
-  width: 50px;
+  /* height: 50px;
+  width: 50px; */
   background: url('../img/catalog_button-hover.svg') no-repeat right / contain;
 }
 .catalog__painters-btn-active:after {
   content: '';
-  height: 50px;
-  width: 50px;
+  /* height: 50px;
+  width: 50px; */
   background: url('../img/catalog_button-active.svg') no-repeat right / contain;
 }
 
@@ -456,5 +456,25 @@
 
   .catalog__item-title {
     margin-bottom: 10px;
+  }
+
+  .catalog__painter-isempty {
+    padding-left: 115px;
+    height: 130px;
+  }
+  .catalog__painter-isempty::before {
+    left: 6px;
+    top: 6px;
+    width: 79px;
+    height: 118px;
+  }
+  .catalog__painter-isempty::after {
+    left: 0;
+    top: 0;
+    width: 90px;
+    height: 130px;
+  }
+  .catalog__painter-isempty-title {
+    font-size: 18px;
   }
 }

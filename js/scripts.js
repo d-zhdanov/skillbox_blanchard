@@ -86,12 +86,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   // Galery. Filter
-  const galery_filter = document.querySelector('#galery__filter');
-  const choices = new Choices(galery_filter, {
+  const galeryFilter = document.getElementById('galeryFilter');
+  const choicesGalery = new Choices(galeryFilter, {
     searchEnabled: false,
     itemSelectText: '',
     removeItemButton: true,
   });
+
+
+  // // Editions. Filter
+  // const editionsFilter = document.getElementById('editionsFilter');
+  // const choicesEditions = new Choices(editionsFilter, {
+  //   searchEnabled: false,
+  //   itemSelectText: '',
+  // });
 
   // Табы для Каталога. Страны.
   document.querySelectorAll('.catalog__btn').forEach(function(catalogTabBtn) {
@@ -155,8 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var myMap = new ymaps.Map("contacts__map", {
       center: [55.76, 37.64],
       zoom: 15,
-      // controls: ['zoomControl', 'geolocationControl'],
-      controls: [],
+      controls: ['zoomControl', 'geolocationControl'],
     })
   };
 

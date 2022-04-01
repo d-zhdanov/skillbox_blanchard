@@ -112,6 +112,7 @@
 
 .choices[data-type*=select-one] .choices__inner {
   padding-bottom: 6px;
+  z-index: 2;
 }
 
 .choices__list--dropdown .choices__item--selectable {
@@ -131,6 +132,7 @@
 
 .choices__list--dropdown, .choices__list[aria-expanded] {
   border-radius: 6px;
+  z-index: 2;
 }
 
 .choices[data-type*='select-one']:after {
