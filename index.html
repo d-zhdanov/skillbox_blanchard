@@ -29,13 +29,6 @@
   <script src="https://unpkg.com/@popperjs/core@2" defer></script>
   <script src="https://unpkg.com/tippy.js@6" defer></script>
 
-  <script src="js/burger.js" defer></script>
-  <script src="js/galery_modal.js" defer></script>
-  <script src="js/swiper_events.js" defer></script>
-  <script src="js/swiper_editions.js" defer></script>
-  <script src="js/editions_form.js" defer></script>
-  <script src="js/scripts.js" defer></script>
-
   <title>Blanchard - художественная галерея</title>
 </head>
 <body>
@@ -83,11 +76,20 @@
             </svg>
             Войти
           </a>
-          <button class="btn search-btn" type="submit" aria-label="Искать">
+          <button class="btn search-btn js-open-search" type="button" aria-label="Искать">
             <svg class="search-btn__img" aria-hidden="true">
               <use xlink:href="#search__form-button-img" />
             </svg>
           </button>
+          <form class="search__form search__form-tablet js-form" action="#" method="POST">
+            <button class="btn search__form-button" type="submit" aria-label="Искать">
+              <svg class="search__form-button-img" aria-hidden="true">
+                <use xlink:href="#search__form-button-img" />
+              </svg>
+            </button>
+            <input class="search__form-input" type="text" placeholder="Поиск по сайту">
+            <button class="btn close-btn js-close" type="button"></button>
+          </form>
         </div>
       </div>
     </div>
@@ -1142,7 +1144,7 @@
         <div class="editions__container">
           <div class="editions__filter">
             <h2 class="section-title editions__title">Издания</h2>
-            <!-- <span class="editions__filter-categories">Категории</span> -->
+            <span class="editions__filter-categories">Категории</span>
             <form class="editions__filter-category" action="POST">
               <div class="questions">
                 <button class="heading js-check-heading" type="button">Категории</button>
@@ -1577,5 +1579,12 @@
     </symbol>
 
   </svg>
+  <script src="js/burger.js" defer></script>
+  <script src="js/galery_modal.js" defer></script>
+  <script src="js/swiper_events.js" defer></script>
+  <script src="js/swiper_editions.js" defer></script>
+  <script src="js/editions_form.js" defer></script>
+  <script src="js/header_search.js" defer></script>
+  <script src="js/scripts.js" defer></script>
 </body>
 </html>
