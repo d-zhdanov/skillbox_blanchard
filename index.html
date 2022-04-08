@@ -81,7 +81,7 @@
               <use xlink:href="#search__form-button-img" />
             </svg>
           </button>
-          <form class="search__form search__form-tablet js-form" action="#" method="POST">
+          <form class="search__formw js-form" action="#" method="POST">
             <button class="btn search__form-button" type="submit" aria-label="Искать">
               <svg class="search__form-button-img" aria-hidden="true">
                 <use xlink:href="#search__form-button-img" />
@@ -258,268 +258,220 @@
               <div class="swiper galery__swiper">
                 <div class="swiper-wrapper galery__wrapper">
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/01.jpg" srcset="./images/galery/01@2x.jpg 2x" loading="lazy" alt="Картина01">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">Казимир Малевич</h3>
-                        <span class="g-cap__name">“Женщина с граблями”</span>
-                        <span class="g-cap__created">1931-1932</span>
-                        <p class="g-cap__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/01-320@2x.jpg 2x, ./images/galery/01-320.jpg 1x" media="(max-width: 650px)" type="image/jpeg">
+                      <source srcset="./images/galery/01-768@2x.jpg 2x, ./images/galery/01-768.jpg 1x" media="(max-width: 860px)" type="image/jpeg">
+                      <source srcset="./images/galery/01-1920@2x.jpg 2x, ./images/galery/01-1920.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/01-1920@2x.jpg 2x, ./images/galery/01-1920.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/01-1920.jpg" alt="Картина01" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/02.jpg" srcset="./images/galery/02@2x.jpg 2x" loading="lazy" alt="Картина02">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/02-320@2x.jpg 2x, ./images/galery/02-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/02-768@2x.jpg 2x, ./images/galery/02-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/02@2x.jpg 2x, ./images/galery/02.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/02@2x.jpg 2x, ./images/galery/02.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/02.jpg" alt="Картина02" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/03.jpg" srcset="./images/galery/03@2x.jpg 2x" loading="lazy" alt="Картина03">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/03-320@2x.jpg 2x, ./images/galery/03-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/03-768@2x.jpg 2x, ./images/galery/03-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/03@2x.jpg 2x, ./images/galery/03.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/03@2x.jpg 2x, ./images/galery/03.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/03.jpg" alt="Картина03" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/04.jpg" srcset="./images/galery/04@2x.jpg 2x" loading="lazy" alt="Картина04">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/04-320@2x.jpg 2x, ./images/galery/04-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/04-768@2x.jpg 2x, ./images/galery/04-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/04@2x.jpg 2x, ./images/galery/04.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/04@2x.jpg 2x, ./images/galery/04.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/04.jpg" alt="Картина04" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/05.jpg" srcset="./images/galery/05@2x.jpg 2x" loading="lazy" alt="Картина05">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/05-320@2x.jpg 2x, ./images/galery/05-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/05-768@2x.jpg 2x, ./images/galery/05-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/05@2x.jpg 2x, ./images/galery/05.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/05@2x.jpg 2x, ./images/galery/05.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/05.jpg" alt="Картина05" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/06.jpg" srcset="./images/galery/06@2x.jpg 2x" loading="lazy" alt="Картина06">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/06-320@2x.jpg 2x, ./images/galery/06-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/06-768@2x.jpg 2x, ./images/galery/06-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/06@2x.jpg 2x, ./images/galery/06.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/06@2x.jpg 2x, ./images/galery/06.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/06.jpg" alt="Картина06" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/07.jpg" srcset="./images/galery/07@2x.jpg 2x" loading="lazy" alt="Картина07">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/07-320@2x.jpg 2x, ./images/galery/07-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/07-768@2x.jpg 2x, ./images/galery/07-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/07@2x.jpg 2x, ./images/galery/07.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/07@2x.jpg 2x, ./images/galery/07.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/07.jpg" alt="Картина07" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/08.jpg" srcset="./images/galery/08@2x.jpg 2x" loading="lazy" alt="Картина08">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/08-320@2x.jpg 2x, ./images/galery/08-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/08-768@2x.jpg 2x, ./images/galery/08-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/08@2x.jpg 2x, ./images/galery/08.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/08@2x.jpg 2x, ./images/galery/08.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/08.jpg" alt="Картина08" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/09.jpg" srcset="./images/galery/09@2x.jpg 2x" loading="lazy" alt="Картина09">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/09-320@2x.jpg 2x, ./images/galery/09-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/09-768@2x.jpg 2x, ./images/galery/09-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/09@2x.jpg 2x, ./images/galery/09.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/09@2x.jpg 2x, ./images/galery/09.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/09.jpg" alt="Картина09" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/10.jpg" srcset="./images/galery/10@2x.jpg 2x" loading="lazy" alt="Картина10">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/10-320@2x.jpg 2x, ./images/galery/10-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/10-768@2x.jpg 2x, ./images/galery/10-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/10@2x.jpg 2x, ./images/galery/10.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/10@2x.jpg 2x, ./images/galery/10.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/10.jpg" alt="Картина10" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/11.jpg" srcset="./images/galery/11@2x.jpg 2x" loading="lazy" alt="Картина11">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/11-320@2x.jpg 2x, ./images/galery/11-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/11-768@2x.jpg 2x, ./images/galery/11-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/11@2x.jpg 2x, ./images/galery/11.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/11@2x.jpg 2x, ./images/galery/11.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/11.jpg" alt="Картина11" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/12.jpg" srcset="./images/galery/12@2x.jpg 2x" loading="lazy" alt="Картина12">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/12-320@2x.jpg 2x, ./images/galery/12-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/12-768@2x.jpg 2x, ./images/galery/12-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/12@2x.jpg 2x, ./images/galery/12.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/12@2x.jpg 2x, ./images/galery/12.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/12.jpg" alt="Картина12" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/13.jpg" srcset="./images/galery/13@2x.jpg 2x" loading="lazy" alt="Картина13">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/13-320@2x.jpg 2x, ./images/galery/13-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/13-768@2x.jpg 2x, ./images/galery/13-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/13@2x.jpg 2x, ./images/galery/13.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/13@2x.jpg 2x, ./images/galery/13.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/13.jpg" alt="Картина13" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/14.jpg" srcset="./images/galery/14@2x.jpg 2x" loading="lazy" alt="Картина14">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/14-320@2x.jpg 2x, ./images/galery/14-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/14-768@2x.jpg 2x, ./images/galery/14-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/14@2x.jpg 2x, ./images/galery/14.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/14@2x.jpg 2x, ./images/galery/14.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/14.jpg" alt="Картина14" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/15.jpg" srcset="./images/galery/15@2x.jpg 2x" loading="lazy" alt="Картина15">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/15-320@2x.jpg 2x, ./images/galery/15-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/15-768@2x.jpg 2x, ./images/galery/15-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/15@2x.jpg 2x, ./images/galery/15.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/15@2x.jpg 2x, ./images/galery/15.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/15.jpg" alt="Картина15" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/16.jpg" srcset="./images/galery/16@2x.jpg 2x" loading="lazy" alt="Картина16">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/16-320@2x.jpg 2x, ./images/galery/16-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/16-768@2x.jpg 2x, ./images/galery/16-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/16@2x.jpg 2x, ./images/galery/16.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/16@2x.jpg 2x, ./images/galery/16.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/16.jpg" alt="Картина16" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/17.jpg" srcset="./images/galery/17@2x.jpg 2x" loading="lazy" alt="Картина17">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/17-320@2x.jpg 2x, ./images/galery/17-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/17-768@2x.jpg 2x, ./images/galery/17-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/17@2x.jpg 2x, ./images/galery/17.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/17@2x.jpg 2x, ./images/galery/17.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/17.jpg" alt="Картина17" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/18.jpg" srcset="./images/galery/18@2x.jpg 2x" loading="lazy" alt="Картина18">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/18-320@2x.jpg 2x, ./images/galery/18-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/18-768@2x.jpg 2x, ./images/galery/18-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/18@2x.jpg 2x, ./images/galery/18.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/18@2x.jpg 2x, ./images/galery/18.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/18.jpg" alt="Картина18" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/19.jpg" srcset="./images/galery/19@2x.jpg 2x" loading="lazy" alt="Картина19">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/19-320@2x.jpg 2x, ./images/galery/19-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/19-768@2x.jpg 2x, ./images/galery/19-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/19@2x.jpg 2x, ./images/galery/19.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/19@2x.jpg 2x, ./images/galery/19.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/19.jpg" alt="Картина19" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/20.jpg" srcset="./images/galery/20@2x.jpg 2x" loading="lazy" alt="Картина20">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/20-320@2x.jpg 2x, ./images/galery/20-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/20-768@2x.jpg 2x, ./images/galery/20-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/20@2x.jpg 2x, ./images/galery/20.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/20@2x.jpg 2x, ./images/galery/20.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/20.jpg" alt="Картина20" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/21.jpg" srcset="./images/galery/21@2x.jpg 2x" loading="lazy" alt="Картина21">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/21-320@2x.jpg 2x, ./images/galery/21-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/21-768@2x.jpg 2x, ./images/galery/21-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/21@2x.jpg 2x, ./images/galery/21.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/21@2x.jpg 2x, ./images/galery/21.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/21.jpg" alt="Картина21" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/22.jpg" srcset="./images/galery/22@2x.jpg 2x" loading="lazy" alt="Картина22">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/22-320@2x.jpg 2x, ./images/galery/22-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/22-768@2x.jpg 2x, ./images/galery/22-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/22@2x.jpg 2x, ./images/galery/22.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/22@2x.jpg 2x, ./images/galery/22.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/22.jpg" alt="Картина22" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/23.jpg" srcset="./images/galery/23@2x.jpg 2x" loading="lazy" alt="Картина23">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/23-320@2x.jpg 2x, ./images/galery/23-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/23-768@2x.jpg 2x, ./images/galery/23-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/23@2x.jpg 2x, ./images/galery/23.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/23@2x.jpg 2x, ./images/galery/23.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/23.jpg" alt="Картина23" />
+                    </picture>
                   </button>
                   <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
-                    <figure class="galery__figure">
-                      <img class="galery__image" src="./images/galery/24.jpg" srcset="./images/galery/24@2x.jpg 2x" loading="lazy" alt="Картина24">
-                      <figcaption class="galery__caption g-cap">
-                        <h3 class="g-cap__author">--Автор--</h3>
-                        <span class="g-cap__name">--Наименование--</span>
-                        <span class="g-cap__created">--год создания--</span>
-                        <p class="g-cap__desc">--описание--</p>
-                      </figcaption>
-                    </figure>
+                    <picture>
+                      <source srcset="./images/galery/24-320@2x.jpg 2x, ./images/galery/24-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/24-768@2x.jpg 2x, ./images/galery/24-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/24@2x.jpg 2x, ./images/galery/24.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/24@2x.jpg 2x, ./images/galery/24.jpg 1x" media="(min-width: 1366px)" />
+                      <img class="galery__image" src="./images/galery/24.jpg" alt="Картина24" />
+                    </picture>
                   </button>
                 </div>
               </div>
@@ -1503,7 +1455,20 @@
       </div>
     </div>
   </footer>
-  <div class="modal"></div>
+  <div class="modal">
+    <figcaption class="galery__caption g-cap">
+      <h3 class="g-cap__author">Казимир Малевич</h3>
+      <span class="g-cap__name">“Женщина с граблями”</span>
+      <span class="g-cap__created">1931-1932</span>
+      <p class="g-cap__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
+    </figcaption>
+    <figcaption class="galery__caption g-cap">
+      <h3 class="g-cap__author">--Автор--</h3>
+      <span class="g-cap__name">--Наименование--</span>
+      <span class="g-cap__created">--год создания--</span>
+      <p class="g-cap__desc">--описание--</p>
+    </figcaption>
+  </div>
 
   <svg class="visually-hidden" xmlns="http://www.w3.org/2000/svg">
     <symbol id="login" viewbox="0 0 173 40">
