@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const choicesGalery = new Choices(galeryFilter, {
     searchEnabled: false,
     itemSelectText: '',
-    removeItemButton: true,
+    removeItemButton: false,
   });
 
 

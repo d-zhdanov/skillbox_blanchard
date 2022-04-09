@@ -121,27 +121,31 @@
 
 
 .header__search {
-  background: rgba(0, 0, 0, .4);
+  position: relative;
+}
+.header__search::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, .4);
+  z-index: -1;
 }
 
 .search__containter {
-  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .search__list {
-  /* height: 100%; */
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 100%;
 }
 
 .search__item {
-  /* height: 100%; */
-  /* padding-top: 20px;
-  padding-bottom: 25px; */
+  padding-top: 20px;
+  padding-bottom: 25px;
   position: relative;
   display: flex;
 }
@@ -191,11 +195,12 @@
 .search__button:hover {
   color: #9D5CD0;
 }
-.search__button:focus {
+.search__button:focus-visible {
   color: white;
 }
-.search__button:focus::before {
-  background-color: #7943A4;
+.search__button:focus-visible::before{
+  background-color: #7943A4ff;
+  transition: background-color .3s ease-in-out;
 }
 .search__button:active {
   color: #7943A4;
@@ -209,28 +214,28 @@
 }
 
 
-.search__form {
+.search-form {
   min-width: 251px;
   /* padding-left: 31px; */
   font-size: 18px;
   line-height: 25px;
 }
-.search__form.is-opened {
+.search-form.is-opened {
   display: flex;
   animation-name: search-open;
   animation-duration: .3s;
 }
 
-.search__form.is-closed {
+.search-form.is-closed {
   animation-name: search-close;
   animation-duration: .3s;
 }
 
-.search__form-tablet {
+.search-form_tablet {
   display: none;
 }
 
-.search__form-button {
+.search-form__button {
   height: 29px;
   width: 23px;
   margin-right: 4px;
@@ -240,7 +245,7 @@
 }
 
 .search-btn__img,
-.search__form-button-img {
+.search-form__button-img {
   height: 22px;
   width: 23px;
   vertical-align: bottom;
@@ -248,20 +253,20 @@
   fill: none;
   transition: color .3s ease-in-out;
 }
-.search__form-button:hover .search-btn__img,
-.search__form-button:hover .search__form-button-img,
-.search__form-button:focus .search-btn__img,
-.search__form-button:focus .search__form-button-img {
+.search-form__button:hover .search-btn__img,
+.search-form__button:hover .search-form__button-img,
+.search-form__button:focus .search-btn__img,
+.search-form__button:focus .search-form__button-img {
   color: #C283F3;
   transition: color .3s ease-in-out;
 }
-.search__form-button:focus .search-btn__img,
-.search__form-button:focus .search__form-button-img {
+.search-form__button:focus .search-btn__img,
+.search-form__button:focus .search-form__button-img {
   color: #7943A4;
   transition: color .3s ease-in-out;
 }
 
-.search__form-input {
+.search-form__input {
   display: inline-block;
   color: white;
   padding: 4px 0;
@@ -275,18 +280,18 @@
   transition-timing-function: ease-in-out;
   outline: none;
 }
-.search__form-input:hover,
-.search__form-input:focus {
+.search-form__input:hover,
+.search-form__input:focus {
   border-bottom-color: #C283F3;
 }
-.search__form-input:focus {
+.search-form__input:focus {
   border-bottom-color: #7943A4;
 }
 
-.search__form-input::placeholder {
+.search-form__input::placeholder {
   color: white;
 }
-.search__form-input:focus::placeholder {
+.search-form__input:focus::placeholder {
   color: transparent;
 }
 
@@ -336,82 +341,104 @@
   visibility: visible;
   opacity: 1;
 } */
-.submenu li {
-  width: 220px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-}
+/* .submenu li {
+
+} */
 .submenu li:not(:last-child) {
   margin-bottom: 20px;
 }
 .submenu li a {
-  padding: 0 14px;
+  max-width: 220px;
+  /* height: 40px; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  border: 2px solid transparent;
+  box-sizing: border-box;
   color: white;
+  line-height: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+.submenu li a:focus-visible,
+.submenu li a:hover {
+  border-color: #9D5CD0;
+}
+.submenu li a:active {
+  border-color: #D1A9F0;
+}
+.submenu li a:active::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
+}
+
 .submenu__realism-1 {
-  background: url('../images/header/sm_bg_realism_1.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_realism_1.jpg');
 }
 .submenu__realism-2 {
-  background: url('../images/header/sm_bg_realism_2.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_realism_2.jpg');
 }
 .submenu__realism-3 {
-  background: url('../images/header/sm_bg_realism_3.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_realism_3.jpg');
 }
 .submenu__realism-4 {
-  background: url('../images/header/sm_bg_realism_4.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_realism_4.jpg');
 }
 
 .submenu__impressionism-1 {
-  background: url('../images/header/sm_bg_impress_1.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_impress_1.jpg');
 }
 .submenu__impressionism-2 {
-  background: url('../images/header/sm_bg_impress_2.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_impress_2.jpg');
 }
 .submenu__impressionism-3 {
-  background: url('../images/header/sm_bg_impress_3.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_impress_3.jpg');
 }
 .submenu__impressionism-4 {
-  background: url('../images/header/sm_bg_impress_4.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_impress_4.jpg');
 }
 
 .submenu__postimpressionism-1 {
-  background: url('../images/header/sm_bg_postimpress_1.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_postimpress_1.jpg');
 }
 .submenu__postimpressionism-2 {
-  background: url('../images/header/sm_bg_postimpress_2.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_postimpress_2.jpg');
 }
 .submenu__postimpressionism-3 {
-  background: url('../images/header/sm_bg_postimpress_3.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_postimpress_3.jpg');
 }
 .submenu__postimpressionism-4 {
-  background: url('../images/header/sm_bg_postimpress_4.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_postimpress_4.jpg');
 }
 
 .submenu__avangard-1 {
-  background: url('../images/header/sm_bg_avangard_1.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_avangard_1.jpg');
 }
 .submenu__avangard-2 {
-  background: url('../images/header/sm_bg_avangard_2.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_avangard_2.jpg');
 }
 .submenu__avangard-3 {
-  background: url('../images/header/sm_bg_avangard_3.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_avangard_3.jpg');
 }
 .submenu__avangard-4 {
-  background: url('../images/header/sm_bg_avangard_4.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_avangard_4.jpg');
 }
 
 .submenu__futurism-1 {
-  background: url('../images/header/sm_bg_futurism_1.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_futurism_1.jpg');
 }
 .submenu__futurism-2 {
-  background: url('../images/header/sm_bg_futurism_2.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_futurism_2.jpg');
 }
 .submenu__futurism-3 {
-  background: url('../images/header/sm_bg_futurism_3.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_futurism_3.jpg');
 }
 .submenu__futurism-4 {
-  background: url('../images/header/sm_bg_futurism_4.jpg') no-repeat center / cover;
+  background-image: url('../images/header/sm_bg_futurism_4.jpg');
 }
 
 

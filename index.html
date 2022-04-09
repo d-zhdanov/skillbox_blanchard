@@ -8,7 +8,7 @@
   <link rel="preload" href="fonts/open-sans-v20-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./img/favicon.png" type="image/x-icon">
 
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
@@ -81,13 +81,13 @@
               <use xlink:href="#search__form-button-img" />
             </svg>
           </button>
-          <form class="search__formw js-form" action="#" method="POST">
-            <button class="btn search__form-button" type="submit" aria-label="Искать">
-              <svg class="search__form-button-img" aria-hidden="true">
+          <form class="search-form search-form_tablet js-form" action="#" method="POST">
+            <button class="btn search-form__button" type="submit" aria-label="Искать">
+              <svg class="search-form__button-img" aria-hidden="true">
                 <use xlink:href="#search__form-button-img" />
               </svg>
             </button>
-            <input class="search__form-input" type="text" placeholder="Поиск по сайту">
+            <input class="search-form__input" type="text" placeholder="Поиск по сайту">
             <button class="btn close-btn js-close" type="button"></button>
           </form>
         </div>
@@ -107,12 +107,12 @@
               <div class="submenu js-header-drop" data-target="one">
                 <div class="submenu__wrap" data-simplebar>
                   <ul class="submenu__list">
-                    <li class="submenu__realism-1"><a href="#">Тинторетто</a></li>
-                    <li class="submenu__realism-2"><a href="#">Фридрих</a></li>
-                    <li class="submenu__realism-3"><a href="#">Леонардо</a></li>
-                    <li class="submenu__realism-4"><a href="#">Верроккьо</a></li>
-                    <li class="submenu__realism-4"><a href="#">Верроккьо</a></li>
-                    <li class="submenu__realism-4"><a href="#">Верроккьо</a></li>
+                    <li><a class="submenu__realism-1" href="#">Тинторетто</a></li>
+                    <li><a class="submenu__realism-2" href="#">Фридрих</a></li>
+                    <li><a class="submenu__realism-3" href="#">Леонардо</a></li>
+                    <li><a class="submenu__realism-4" href="#">Верроккьо</a></li>
+                    <li><a class="submenu__realism-4" href="#">Верроккьо</a></li>
+                    <li><a class="submenu__realism-4" href="#">Верроккьо</a></li>
                   </ul>
                 </div>
               </div>
@@ -127,11 +127,11 @@
               <div class="submenu js-header-drop" data-target="two">
                 <div class="submenu__wrap" data-simplebar>
                   <ul class="submenu__list">
-                    <li class="submenu__impressionism-1"><a href="#">Моне</a></li>
-                    <li class="submenu__impressionism-2"><a href="#">Сислей</a></li>
-                    <li class="submenu__impressionism-3"><a href="#">Мане</a></li>
-                    <li class="submenu__impressionism-4"><a href="#">Ренуар</a></li>
-                    <li class="submenu__impressionism-4"><a href="#">Ренуар</a></li>
+                    <li><a class="submenu__impressionism-1" href="#">Моне</a></li>
+                    <li><a class="submenu__impressionism-2" href="#">Сислей</a></li>
+                    <li><a class="submenu__impressionism-3" href="#">Мане</a></li>
+                    <li><a class="submenu__impressionism-4" href="#">Ренуар</a></li>
+                    <li><a class="submenu__impressionism-4" href="#">Ренуар</a></li>
                   </ul>
                 </div>
               </div>
@@ -146,10 +146,10 @@
               <div class="submenu js-header-drop" data-target="tree">
                 <div class="submenu__wrap" data-simplebar>
                   <ul class="submenu__list">
-                    <li class="submenu__postimpressionism-1"><a href="#">Ван Гог</a></li>
-                    <li class="submenu__postimpressionism-2"><a href="#">Сезанн</a></li>
-                    <li class="submenu__postimpressionism-3"><a href="#">Гоген</a></li>
-                    <li class="submenu__postimpressionism-4"><a href="#">Сёра</a></li>
+                    <li><a class="submenu__postimpressionism-1" href="#">Ван Гог</a></li>
+                    <li><a class="submenu__postimpressionism-2" href="#">Сезанн</a></li>
+                    <li><a class="submenu__postimpressionism-3" href="#">Гоген</a></li>
+                    <li><a class="submenu__postimpressionism-4" href="#">Сёра</a></li>
                   </ul>
                 </div>
               </div>
@@ -164,10 +164,10 @@
               <div class="submenu js-header-drop" data-target="four">
                 <div class="submenu__wrap" data-simplebar>
                   <ul class="submenu__list">
-                    <li class="submenu__avangard-1"><a href="#">Кандинский</a></li>
-                    <li class="submenu__avangard-2"><a href="#">Маринетти</a></li>
-                    <li class="submenu__avangard-3"><a href="#">Малевич</a></li>
-                    <li class="submenu__avangard-4"><a href="#">Пикассо</a></li>
+                    <li><a class="submenu__avangard-1" href="#">Кандинский</a></li>
+                    <li><a class="submenu__avangard-2" href="#">Маринетти</a></li>
+                    <li><a class="submenu__avangard-3" href="#">Малевич</a></li>
+                    <li><a class="submenu__avangard-4" href="#">Пикассо</a></li>
                   </ul>
                 </div>
               </div>
@@ -182,22 +182,22 @@
               <div class="submenu js-header-drop" data-target="five">
                 <div class="submenu__wrap" data-simplebar>
                   <ul class="submenu__list">
-                    <li class="submenu__futurism-1"><a href="#">Карра</a></li>
-                    <li class="submenu__futurism-2"><a href="#">Прателла</a></li>
-                    <li class="submenu__futurism-3"><a href="#">Северини</a></li>
-                    <li class="submenu__futurism-4"><a href="#">Балла</a></li>
+                    <li><a class="submenu__futurism-1" href="#">Карра</a></li>
+                    <li><a class="submenu__futurism-2" href="#">Прателла</a></li>
+                    <li><a class="submenu__futurism-3" href="#">Северини</a></li>
+                    <li><a class="submenu__futurism-4" href="#">Балла</a></li>
                   </ul>
                 </div>
               </div>
             </li>
           </ul>
-          <form class="search__form" action="#" method="POST">
-            <button class="btn search__form-button" type="submit" aria-label="Искать">
-              <svg class="search__form-button-img" aria-hidden="true">
+          <form class="search-form" action="#" method="POST">
+            <button class="btn search-form__button" type="submit" aria-label="Искать">
+              <svg class="search-form__button-img" aria-hidden="true">
                 <use xlink:href="#search__form-button-img" />
               </svg>
             </button>
-            <input class="search__form-input" type="text" placeholder="Поиск по сайту">
+            <input class="search-form__input" type="text" placeholder="Поиск по сайту">
           </form>
         </div>
       </div>
@@ -234,7 +234,7 @@
           <div class="galery__container-left">
             <div class="galery__intro">
               <h2 class="section-title galery__title">Галерея</h2>
-              <label class="galery__label" for="galery__filter">
+              <label class="galery__label" for="galeryFilter">
                 Фильтр:
                 <select class="galery__filter" name="galery__filter" id="galeryFilter">
                   <option value="painting">Живопись</option>
@@ -257,16 +257,16 @@
             <div class="galery__slider">
               <div class="swiper galery__swiper">
                 <div class="swiper-wrapper galery__wrapper">
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal01">
                     <picture>
-                      <source srcset="./images/galery/01-320@2x.jpg 2x, ./images/galery/01-320.jpg 1x" media="(max-width: 650px)" type="image/jpeg">
-                      <source srcset="./images/galery/01-768@2x.jpg 2x, ./images/galery/01-768.jpg 1x" media="(max-width: 860px)" type="image/jpeg">
-                      <source srcset="./images/galery/01-1920@2x.jpg 2x, ./images/galery/01-1920.jpg 1x" media="(max-width: 1365px)">
-                      <source srcset="./images/galery/01-1920@2x.jpg 2x, ./images/galery/01-1920.jpg 1x" media="(min-width: 1366px)" />
-                      <img class="galery__image" src="./images/galery/01-1920.jpg" alt="Картина01" />
+                      <source srcset="./images/galery/01-320@2x.jpg 2x, ./images/galery/01-320.jpg 1x" media="(max-width: 650px)">
+                      <source srcset="./images/galery/01-768@2x.jpg 2x, ./images/galery/01-768.jpg 1x" media="(max-width: 860px)">
+                      <source srcset="./images/galery/01@2x.jpg 2x, ./images/galery/01.jpg 1x" media="(max-width: 1365px)">
+                      <source srcset="./images/galery/01@2x.jpg 2x, ./images/galery/01.jpg 1x" media="(min-width: 1366px)">
+                      <img class="galery__image" src="./images/galery/01.jpg" alt="Картина01">
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal02">
                     <picture>
                       <source srcset="./images/galery/02-320@2x.jpg 2x, ./images/galery/02-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/02-768@2x.jpg 2x, ./images/galery/02-768.jpg 1x" media="(max-width: 860px)">
@@ -275,7 +275,7 @@
                       <img class="galery__image" src="./images/galery/02.jpg" alt="Картина02" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal03">
                     <picture>
                       <source srcset="./images/galery/03-320@2x.jpg 2x, ./images/galery/03-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/03-768@2x.jpg 2x, ./images/galery/03-768.jpg 1x" media="(max-width: 860px)">
@@ -284,7 +284,7 @@
                       <img class="galery__image" src="./images/galery/03.jpg" alt="Картина03" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal04">
                     <picture>
                       <source srcset="./images/galery/04-320@2x.jpg 2x, ./images/galery/04-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/04-768@2x.jpg 2x, ./images/galery/04-768.jpg 1x" media="(max-width: 860px)">
@@ -293,7 +293,7 @@
                       <img class="galery__image" src="./images/galery/04.jpg" alt="Картина04" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal05">
                     <picture>
                       <source srcset="./images/galery/05-320@2x.jpg 2x, ./images/galery/05-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/05-768@2x.jpg 2x, ./images/galery/05-768.jpg 1x" media="(max-width: 860px)">
@@ -302,7 +302,7 @@
                       <img class="galery__image" src="./images/galery/05.jpg" alt="Картина05" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal06">
                     <picture>
                       <source srcset="./images/galery/06-320@2x.jpg 2x, ./images/galery/06-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/06-768@2x.jpg 2x, ./images/galery/06-768.jpg 1x" media="(max-width: 860px)">
@@ -311,7 +311,7 @@
                       <img class="galery__image" src="./images/galery/06.jpg" alt="Картина06" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal07">
                     <picture>
                       <source srcset="./images/galery/07-320@2x.jpg 2x, ./images/galery/07-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/07-768@2x.jpg 2x, ./images/galery/07-768.jpg 1x" media="(max-width: 860px)">
@@ -320,7 +320,7 @@
                       <img class="galery__image" src="./images/galery/07.jpg" alt="Картина07" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal08">
                     <picture>
                       <source srcset="./images/galery/08-320@2x.jpg 2x, ./images/galery/08-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/08-768@2x.jpg 2x, ./images/galery/08-768.jpg 1x" media="(max-width: 860px)">
@@ -329,7 +329,7 @@
                       <img class="galery__image" src="./images/galery/08.jpg" alt="Картина08" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal09">
                     <picture>
                       <source srcset="./images/galery/09-320@2x.jpg 2x, ./images/galery/09-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/09-768@2x.jpg 2x, ./images/galery/09-768.jpg 1x" media="(max-width: 860px)">
@@ -338,7 +338,7 @@
                       <img class="galery__image" src="./images/galery/09.jpg" alt="Картина09" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal10">
                     <picture>
                       <source srcset="./images/galery/10-320@2x.jpg 2x, ./images/galery/10-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/10-768@2x.jpg 2x, ./images/galery/10-768.jpg 1x" media="(max-width: 860px)">
@@ -347,7 +347,7 @@
                       <img class="galery__image" src="./images/galery/10.jpg" alt="Картина10" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal11">
                     <picture>
                       <source srcset="./images/galery/11-320@2x.jpg 2x, ./images/galery/11-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/11-768@2x.jpg 2x, ./images/galery/11-768.jpg 1x" media="(max-width: 860px)">
@@ -356,7 +356,7 @@
                       <img class="galery__image" src="./images/galery/11.jpg" alt="Картина11" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal12">
                     <picture>
                       <source srcset="./images/galery/12-320@2x.jpg 2x, ./images/galery/12-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/12-768@2x.jpg 2x, ./images/galery/12-768.jpg 1x" media="(max-width: 860px)">
@@ -365,7 +365,7 @@
                       <img class="galery__image" src="./images/galery/12.jpg" alt="Картина12" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal13">
                     <picture>
                       <source srcset="./images/galery/13-320@2x.jpg 2x, ./images/galery/13-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/13-768@2x.jpg 2x, ./images/galery/13-768.jpg 1x" media="(max-width: 860px)">
@@ -374,7 +374,7 @@
                       <img class="galery__image" src="./images/galery/13.jpg" alt="Картина13" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal14">
                     <picture>
                       <source srcset="./images/galery/14-320@2x.jpg 2x, ./images/galery/14-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/14-768@2x.jpg 2x, ./images/galery/14-768.jpg 1x" media="(max-width: 860px)">
@@ -383,7 +383,7 @@
                       <img class="galery__image" src="./images/galery/14.jpg" alt="Картина14" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal15">
                     <picture>
                       <source srcset="./images/galery/15-320@2x.jpg 2x, ./images/galery/15-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/15-768@2x.jpg 2x, ./images/galery/15-768.jpg 1x" media="(max-width: 860px)">
@@ -392,7 +392,7 @@
                       <img class="galery__image" src="./images/galery/15.jpg" alt="Картина15" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal16">
                     <picture>
                       <source srcset="./images/galery/16-320@2x.jpg 2x, ./images/galery/16-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/16-768@2x.jpg 2x, ./images/galery/16-768.jpg 1x" media="(max-width: 860px)">
@@ -401,7 +401,7 @@
                       <img class="galery__image" src="./images/galery/16.jpg" alt="Картина16" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal17">
                     <picture>
                       <source srcset="./images/galery/17-320@2x.jpg 2x, ./images/galery/17-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/17-768@2x.jpg 2x, ./images/galery/17-768.jpg 1x" media="(max-width: 860px)">
@@ -410,7 +410,7 @@
                       <img class="galery__image" src="./images/galery/17.jpg" alt="Картина17" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal18">
                     <picture>
                       <source srcset="./images/galery/18-320@2x.jpg 2x, ./images/galery/18-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/18-768@2x.jpg 2x, ./images/galery/18-768.jpg 1x" media="(max-width: 860px)">
@@ -419,7 +419,7 @@
                       <img class="galery__image" src="./images/galery/18.jpg" alt="Картина18" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal19">
                     <picture>
                       <source srcset="./images/galery/19-320@2x.jpg 2x, ./images/galery/19-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/19-768@2x.jpg 2x, ./images/galery/19-768.jpg 1x" media="(max-width: 860px)">
@@ -428,7 +428,7 @@
                       <img class="galery__image" src="./images/galery/19.jpg" alt="Картина19" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal20">
                     <picture>
                       <source srcset="./images/galery/20-320@2x.jpg 2x, ./images/galery/20-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/20-768@2x.jpg 2x, ./images/galery/20-768.jpg 1x" media="(max-width: 860px)">
@@ -437,7 +437,7 @@
                       <img class="galery__image" src="./images/galery/20.jpg" alt="Картина20" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal21">
                     <picture>
                       <source srcset="./images/galery/21-320@2x.jpg 2x, ./images/galery/21-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/21-768@2x.jpg 2x, ./images/galery/21-768.jpg 1x" media="(max-width: 860px)">
@@ -446,7 +446,7 @@
                       <img class="galery__image" src="./images/galery/21.jpg" alt="Картина21" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal22">
                     <picture>
                       <source srcset="./images/galery/22-320@2x.jpg 2x, ./images/galery/22-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/22-768@2x.jpg 2x, ./images/galery/22-768.jpg 1x" media="(max-width: 860px)">
@@ -455,7 +455,7 @@
                       <img class="galery__image" src="./images/galery/22.jpg" alt="Картина22" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal23">
                     <picture>
                       <source srcset="./images/galery/23-320@2x.jpg 2x, ./images/galery/23-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/23-768@2x.jpg 2x, ./images/galery/23-768.jpg 1x" media="(max-width: 860px)">
@@ -464,7 +464,7 @@
                       <img class="galery__image" src="./images/galery/23.jpg" alt="Картина23" />
                     </picture>
                   </button>
-                  <button class="btn-reset swiper-slide galery__slide" data-graph-path="">
+                  <button class="btn-reset swiper-slide galery__slide" data-path="galeryModal24">
                     <picture>
                       <source srcset="./images/galery/24-320@2x.jpg 2x, ./images/galery/24-320.jpg 1x" media="(max-width: 650px)">
                       <source srcset="./images/galery/24-768@2x.jpg 2x, ./images/galery/24-768.jpg 1x" media="(max-width: 860px)">
@@ -1456,18 +1456,366 @@
     </div>
   </footer>
   <div class="modal">
-    <figcaption class="galery__caption g-cap">
-      <h3 class="g-cap__author">Казимир Малевич</h3>
-      <span class="g-cap__name">“Женщина с граблями”</span>
-      <span class="g-cap__created">1931-1932</span>
-      <p class="g-cap__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
-    </figcaption>
-    <figcaption class="galery__caption g-cap">
-      <h3 class="g-cap__author">--Автор--</h3>
-      <span class="g-cap__name">--Наименование--</span>
-      <span class="g-cap__created">--год создания--</span>
-      <p class="g-cap__desc">--описание--</p>
-    </figcaption>
+    <div class="galery-modal" data-target="galeryModal01">
+      <picture>
+        <source srcset="./images/galery/01-320@2x.jpg 2x, ./images/galery/01-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/01-768@2x.jpg 2x, ./images/galery/01-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/01@2x.jpg 2x, ./images/galery/01.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/01@2x.jpg 2x, ./images/galery/01.jpg 1x" media="(min-width: 1366px)">
+        <img class="galery-modal__image" src="./images/galery/01.jpg" alt="Картина01">
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">Казимир Малевич</h3>
+        <span class="galery-modal__name">“Женщина с граблями”</span>
+        <span class="galery-modal__created">1931-1932</span>
+        <p class="galery-modal__desc">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal02">
+      <picture>
+        <source srcset="./images/galery/02-320@2x.jpg 2x, ./images/galery/02-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/02-768@2x.jpg 2x, ./images/galery/02-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/02@2x.jpg 2x, ./images/galery/02.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/02@2x.jpg 2x, ./images/galery/02.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/02.jpg" alt="Картина02" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal03">
+      <picture>
+        <source srcset="./images/galery/03-320@2x.jpg 2x, ./images/galery/03-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/03-768@2x.jpg 2x, ./images/galery/03-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/03@2x.jpg 2x, ./images/galery/03.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/03@2x.jpg 2x, ./images/galery/03.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/03.jpg" alt="Картина03" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal04">
+      <picture>
+        <source srcset="./images/galery/04-320@2x.jpg 2x, ./images/galery/04-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/04-768@2x.jpg 2x, ./images/galery/04-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/04@2x.jpg 2x, ./images/galery/04.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/04@2x.jpg 2x, ./images/galery/04.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/04.jpg" alt="Картина04" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal05">
+      <picture>
+        <source srcset="./images/galery/05-320@2x.jpg 2x, ./images/galery/05-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/05-768@2x.jpg 2x, ./images/galery/05-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/05@2x.jpg 2x, ./images/galery/05.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/05@2x.jpg 2x, ./images/galery/05.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/05.jpg" alt="Картина05" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal06">
+      <picture>
+        <source srcset="./images/galery/06-320@2x.jpg 2x, ./images/galery/06-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/06-768@2x.jpg 2x, ./images/galery/06-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/06@2x.jpg 2x, ./images/galery/06.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/06@2x.jpg 2x, ./images/galery/06.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/06.jpg" alt="Картина06" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal07">
+      <picture>
+        <source srcset="./images/galery/07-320@2x.jpg 2x, ./images/galery/07-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/07-768@2x.jpg 2x, ./images/galery/07-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/07@2x.jpg 2x, ./images/galery/07.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/07@2x.jpg 2x, ./images/galery/07.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/07.jpg" alt="Картина07" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal08">
+      <picture>
+        <source srcset="./images/galery/08-320@2x.jpg 2x, ./images/galery/08-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/08-768@2x.jpg 2x, ./images/galery/08-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/08@2x.jpg 2x, ./images/galery/08.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/08@2x.jpg 2x, ./images/galery/08.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/08.jpg" alt="Картина08" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal09">
+      <picture>
+        <source srcset="./images/galery/09-320@2x.jpg 2x, ./images/galery/09-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/09-768@2x.jpg 2x, ./images/galery/09-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/09@2x.jpg 2x, ./images/galery/09.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/09@2x.jpg 2x, ./images/galery/09.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/09.jpg" alt="Картина09" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal10">
+      <picture>
+        <source srcset="./images/galery/10-320@2x.jpg 2x, ./images/galery/10-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/10-768@2x.jpg 2x, ./images/galery/10-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/10@2x.jpg 2x, ./images/galery/10.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/10@2x.jpg 2x, ./images/galery/10.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/10.jpg" alt="Картина10" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal11">
+      <picture>
+        <source srcset="./images/galery/11-320@2x.jpg 2x, ./images/galery/11-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/11-768@2x.jpg 2x, ./images/galery/11-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/11@2x.jpg 2x, ./images/galery/11.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/11@2x.jpg 2x, ./images/galery/11.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/11.jpg" alt="Картина11" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal12">
+      <picture>
+        <source srcset="./images/galery/12-320@2x.jpg 2x, ./images/galery/12-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/12-768@2x.jpg 2x, ./images/galery/12-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/12@2x.jpg 2x, ./images/galery/12.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/12@2x.jpg 2x, ./images/galery/12.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/12.jpg" alt="Картина12" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal13">
+      <picture>
+        <source srcset="./images/galery/13-320@2x.jpg 2x, ./images/galery/13-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/13-768@2x.jpg 2x, ./images/galery/13-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/13@2x.jpg 2x, ./images/galery/13.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/13@2x.jpg 2x, ./images/galery/13.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/13.jpg" alt="Картина13" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal14">
+      <picture>
+        <source srcset="./images/galery/14-320@2x.jpg 2x, ./images/galery/14-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/14-768@2x.jpg 2x, ./images/galery/14-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/14@2x.jpg 2x, ./images/galery/14.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/14@2x.jpg 2x, ./images/galery/14.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/14.jpg" alt="Картина14" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal15">
+      <picture>
+        <source srcset="./images/galery/15-320@2x.jpg 2x, ./images/galery/15-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/15-768@2x.jpg 2x, ./images/galery/15-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/15@2x.jpg 2x, ./images/galery/15.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/15@2x.jpg 2x, ./images/galery/15.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/15.jpg" alt="Картина15" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal16">
+      <picture>
+        <source srcset="./images/galery/16-320@2x.jpg 2x, ./images/galery/16-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/16-768@2x.jpg 2x, ./images/galery/16-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/16@2x.jpg 2x, ./images/galery/16.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/16@2x.jpg 2x, ./images/galery/16.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/16.jpg" alt="Картина16" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal17">
+      <picture>
+        <source srcset="./images/galery/17-320@2x.jpg 2x, ./images/galery/17-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/17-768@2x.jpg 2x, ./images/galery/17-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/17@2x.jpg 2x, ./images/galery/17.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/17@2x.jpg 2x, ./images/galery/17.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/17.jpg" alt="Картина17" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal18">
+      <picture>
+        <source srcset="./images/galery/18-320@2x.jpg 2x, ./images/galery/18-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/18-768@2x.jpg 2x, ./images/galery/18-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/18@2x.jpg 2x, ./images/galery/18.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/18@2x.jpg 2x, ./images/galery/18.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/18.jpg" alt="Картина18" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal19">
+      <picture>
+        <source srcset="./images/galery/19-320@2x.jpg 2x, ./images/galery/19-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/19-768@2x.jpg 2x, ./images/galery/19-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/19@2x.jpg 2x, ./images/galery/19.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/19@2x.jpg 2x, ./images/galery/19.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/19.jpg" alt="Картина19" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal20">
+      <picture>
+        <source srcset="./images/galery/20-320@2x.jpg 2x, ./images/galery/20-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/20-768@2x.jpg 2x, ./images/galery/20-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/20@2x.jpg 2x, ./images/galery/20.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/20@2x.jpg 2x, ./images/galery/20.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/20.jpg" alt="Картина20" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal21">
+      <picture>
+        <source srcset="./images/galery/21-320@2x.jpg 2x, ./images/galery/21-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/21-768@2x.jpg 2x, ./images/galery/21-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/21@2x.jpg 2x, ./images/galery/21.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/21@2x.jpg 2x, ./images/galery/21.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/21.jpg" alt="Картина21" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal22">
+      <picture>
+        <source srcset="./images/galery/22-320@2x.jpg 2x, ./images/galery/22-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/22-768@2x.jpg 2x, ./images/galery/22-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/22@2x.jpg 2x, ./images/galery/22.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/22@2x.jpg 2x, ./images/galery/22.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/22.jpg" alt="Картина22" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal23">
+      <picture>
+        <source srcset="./images/galery/23-320@2x.jpg 2x, ./images/galery/23-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/23-768@2x.jpg 2x, ./images/galery/23-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/23@2x.jpg 2x, ./images/galery/23.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/23@2x.jpg 2x, ./images/galery/23.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/23.jpg" alt="Картина23" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
+    <div class="galery-modal" data-target="galeryModal24">
+      <picture>
+        <source srcset="./images/galery/24-320@2x.jpg 2x, ./images/galery/24-320.jpg 1x" media="(max-width: 650px)">
+        <source srcset="./images/galery/24-768@2x.jpg 2x, ./images/galery/24-768.jpg 1x" media="(max-width: 860px)">
+        <source srcset="./images/galery/24@2x.jpg 2x, ./images/galery/24.jpg 1x" media="(max-width: 1365px)">
+        <source srcset="./images/galery/24@2x.jpg 2x, ./images/galery/24.jpg 1x" media="(min-width: 1366px)" />
+        <img class="galery-modal__image" src="./images/galery/24.jpg" alt="Картина24" />
+      </picture>
+      <div class="galery-modal__info">
+        <h3 class="galery-modal__author">--Автор--</h3>
+        <span class="galery-modal__name">--Наименование--</span>
+        <span class="galery-modal__created">--год создания--</span>
+        <p class="galery-modal__desc">--описание--</p>
+      </div>
+    </div>
   </div>
 
   <svg class="visually-hidden" xmlns="http://www.w3.org/2000/svg">
