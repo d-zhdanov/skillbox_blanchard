@@ -118,6 +118,14 @@
   outline: none;
   background: rgba(157, 92, 208, .5);
 }
+.editions__filter-price::placeholder {
+  color: #fff;
+}
+.editions__filter-price::-webkit-outer-spin-button,
+.editions__filter-price::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 .editions__filter-price:hover {
   border: 1px solid #fff;
 }
@@ -129,6 +137,10 @@
   /* max-width: 1150px; */
   width: calc(1150 / var(--desktop-width) * 100vw);
   overflow-x: hidden;
+}
+
+.editions__swsl {
+  padding-bottom: 6px;
 }
 
 .swiper-container-multirow-column>.editions__wrapper {

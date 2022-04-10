@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Каталог. Выбор художника.
-  document.querySelectorAll('.catalog__painter-name').forEach(function(painterBtn) {
+  document.querySelectorAll('.catalog__painter-btn').forEach(function(painterBtn) {
     painterBtn.addEventListener('click', function (event) {
       const path = event.currentTarget.dataset.path;
 

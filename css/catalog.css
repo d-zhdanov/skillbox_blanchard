@@ -147,6 +147,9 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
+  transition-property: color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
 
 .catalog__painters-btn {
@@ -163,55 +166,84 @@
 }
 .catalog__painters-btn:hover {
   border-color: #9D5CD0;
+  transition-property: border-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
 
 .catalog__painters-item:hover + .catalog__painters-item .catalog__painters-btn {
   border-top: 1px solid #9D5CD0;
+  transition-property: border-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
 .catalog__painters-item:last-child:hover > .catalog__painters-btn {
   border-bottom: 1px solid #9D5CD0;
+  transition-property: border-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
 .catalog__painters-item:last-child > .catalog__painters-btn {
   border-bottom: 1px solid #CACACA;
+  transition-property: border-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
 
 .catalog__painters-btn:focus-visible .catalog__painters-years {
   color: #fff;
   background-color: #9D5CD0;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition-property: background-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
 
 .catalog__painters-btn:hover
 .catalog__painters-years {
   color: #9D5CD0;
+  transition-property: color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
 
 .catalog__painters-btn-active {
   color: #7943A4;
   border-color: #7943A4;
   border-bottom: 1px solid #9D5CD0;
+  transition-property: color, border-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
 /* .catalog__painters-item .catalog__painters-btn-active ~ .catalog__painters-item .catalog__painters-btn {
   border-top: 1px solid #7943A4;
 } */
 
-.catalog__painters-btn:after {
+.catalog__painters-btn::after {
   content: '';
   height: 50px;
   width: 50px;
   background: url('../img/catalog_button.svg') no-repeat right / contain;
+  transition-property: background;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
-.catalog__painters-btn:hover:after {
+.catalog__painters-btn:hover::after,
+.catalog__painters-btn-active::after {
   content: '';
   /* height: 50px;
   width: 50px; */
   background: url('../img/catalog_button-hover.svg') no-repeat right / contain;
+  transition-property: background;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
-.catalog__painters-btn-active:after {
+ .catalog__painters-btn:active::after {
   content: '';
-  /* height: 50px;
-  width: 50px; */
   background: url('../img/catalog_button-active.svg') no-repeat right / contain;
+  transition-property: background;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
 }
 
 .catalog__painters-list {
@@ -222,20 +254,19 @@
 
 .catalog__painters-list-active {
   display: block;
-  margin: 26px 0;
+  padding: 26px 0;
   animation: catalog__painters-appear .5s;
 }
 
-.catalog__painter-name {
+.catalog__painter-btn {
   font-size: 16px;
   line-height: 32px;
-  cursor: pointer;
 }
-.catalog__painter-name:hover {
+.catalog__painter-btn:hover {
   color: #9D5CD0;
   text-decoration: underline;
 }
-.catalog__painter-name:active {
+.catalog__painter-btn:active {
   color: #7943A4;
 }
 

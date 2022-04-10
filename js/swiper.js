@@ -53,48 +53,48 @@ let galery_swiper = new Swiper(".galery__swiper", {
 
 
 
-const editions_swiper = new Swiper('.editions__swiper', {
-  navigation: {
-    nextEl: '.editions__button_next',
-    prevEl: '.editions__button_prev',
-  },
+// const editions_swiper = new Swiper('.editions__swiper', {
+//   navigation: {
+//     nextEl: '.editions__button_next',
+//     prevEl: '.editions__button_prev',
+//   },
 
-  pagination: {
-    el: '.editions__pagination',
-    type: 'fraction',
-  },
+//   pagination: {
+//     el: '.editions__pagination',
+//     type: 'fraction',
+//   },
 
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-      grid: {
-        rows: 1
-      },
-      spaceBetween: 30,
-    },
+//   breakpoints: {
+//     320: {
+//       slidesPerView: 2,
+//       grid: {
+//         rows: 1
+//       },
+//       spaceBetween: 30,
+//     },
 
-    860: {
-      slidesPerView: 2,
-      grid: {
-        rows: 1
-      },
-      spaceBetween: 49,
-    },
+//     860: {
+//       slidesPerView: 2,
+//       grid: {
+//         rows: 1
+//       },
+//       spaceBetween: 49,
+//     },
 
-    1366: {
-      slidesPerView: 3,
-      grid: {
-        rows: 1
-      },
-      spaceBetween: 50,
-    }
-  },
+//     1366: {
+//       slidesPerView: 3,
+//       grid: {
+//         rows: 1
+//       },
+//       spaceBetween: 50,
+//     }
+//   },
 
-  autoplay: {
-      delay: 6000,
-      waitForTransition: true,
-  },
-});
+//   autoplay: {
+//       delay: 6000,
+//       waitForTransition: true,
+//   },
+// });
 
 
 
