@@ -15,13 +15,14 @@
   display: inline-block;
   background-color: transparent;
   border: none;
+  outline: none;
 }
 
 .projects__tooltip-img {
   width: 16px;
   height: 16px;
   color: black;
-  stroke: black;
+  /* stroke: #9D5CD0; */
   fill: none;
   transform: translateY(2px);
   transition: fill, color, stroke .1s ease-in-out;
@@ -35,7 +36,7 @@
 .js-tooltip-btn:active .projects__tooltip-img {
   color: white;
   fill: #9D5CD0;
-  stroke: white;
+  /* stroke: white; */
 }
 
 .tippy-box[data-theme~='amethyst'] {
@@ -257,5 +258,19 @@
 
   .projects__partner-title {
     margin-bottom: 11px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .projects__swiper,
+  .projects__wrapper {
+    width: calc(195 / var(--min-width) * 100vw);
+  }
+
+  .projects__swiper-link,
+  .projects__img {
+    width: calc(195 / var(--min-width) * 100vw);
+    height: calc(65 / var(--min-width) * 100vw);
   }
 }

@@ -261,6 +261,7 @@
 .catalog__painter-btn {
   font-size: 16px;
   line-height: 32px;
+  text-align: left;
 }
 .catalog__painter-btn:hover {
   color: #9D5CD0;
@@ -407,7 +408,8 @@
   }
 
   .catalog__btn-item:not(:last-child) {
-    margin-right: 53px;
+    /* margin-right: 53px; */
+    margin-right: 12%;
   }
 
   .catalog__intro {

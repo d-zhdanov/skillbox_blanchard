@@ -112,6 +112,14 @@ const projects_swiper = new Swiper('.projects__swiper', {
 
   breakpoints: {
     320: {
+      slidesPerView: 1,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 34
+    },
+
+    650: {
       slidesPerView: 2,
       grid: {
         rows: 1

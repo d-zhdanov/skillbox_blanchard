@@ -40,11 +40,13 @@
   const menuItems = document?.querySelectorAll('[data-menu-item]');
   const overlay = document?.querySelector('[data-menu-overlay]');
   const login = document?.querySelector('[data-login]');
+  const body = document?.querySelector('body');
 
   burger?.addEventListener('click', (e) => {
     burger?.classList.toggle('burger--active');
     menu?.classList.toggle('nav--active');
     login?.classList.toggle('login--active');
+    body?.classList.toggle('overflow-hidden');
 
     if (menu?.classList.contains('nav--active')) {
       burger?.setAttribute('aria-expanded', 'true');
@@ -63,6 +65,7 @@
     burger.classList.remove('burger--active');
     menu.classList.remove('nav--active');
     login.classList.remove('login--active');
+    body?.classList.remove('overflow-hidden');
     // enableScroll();
   });
 
@@ -73,6 +76,7 @@
       burger.classList.remove('burger--active');
       menu.classList.remove('nav--active');
       login.classList.remove('login--active');
+      body?.classList.remove('overflow-hidden');
       // enableScroll();
     });
   });
@@ -83,6 +87,7 @@
     burger.classList.remove('burger--active');
     menu.classList.remove('nav--active');
     login.classList.remove('login--active');
+    body?.classList.remove('overflow-hidden');
     // enableScroll();
   });
 })();
