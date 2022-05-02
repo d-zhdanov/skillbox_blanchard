@@ -144,7 +144,7 @@
   padding-bottom: 6px;
 }
 
-.swiper-container-multirow-column>.editions__wrapper {
+.swiper-container-multirow-column > .editions__wrapper {
   justify-content: flex-end;
 }
 
@@ -152,7 +152,8 @@
   /* height: 390px; */
   /* height: calc(390 / var(--desktop-width) * 100vw); */
   /* width: 350px; */
-  width: calc(350 / var(--desktop-width) * 100vw);
+  /* width: calc(350 / var(--desktop-width) * 100vw); */
+  width: 100%;
   object-fit: cover;
   margin-bottom: 20px;
 }
@@ -363,13 +364,15 @@
   .questions {
     align-items: stretch;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   .heading {
+    padding: 10px 40px 10px 0;
     border-top: 1px solid rgba(255, 255, 255, .5);
     border-bottom: 1px solid rgba(255, 255, 255, .5);
     font-size: 16px;
+    font-weight: 700;
   }
 
   .heading::after {
@@ -394,10 +397,10 @@
     ~ .checkbox-wrap
     .checkbox:checked
     ~ .checkbox-content {
-    min-height: 45px;
+    min-height: 40px;
     height: auto;
-    padding-top: 12px;
-    padding-bottom: 10px;
+    padding-top: 3px;
+    padding-bottom: 0;
     border-bottom: 1px solid #fff;
     opacity: 1;
   }
@@ -482,7 +485,7 @@
     width: calc(629 / var(--tablet-width) * 100vw);
   }
   .editions__slide {
-    width: calc(320 / var(--tablet-width) * 100vw);
+    /* width: calc(320 / var(--tablet-width) * 100vw); */
     margin-bottom: 6px;
   }
 }
@@ -547,7 +550,13 @@
 
 @media (max-width: 650px) {
   .editions {
+    margin-top: 23px;
+    margin-bottom: 26px;
+    padding-top: 50px;
     padding-bottom: 0;
+  }
+  .editions__title {
+    margin-bottom: 12px;
   }
 
   .editions__wrapper {
@@ -574,6 +583,10 @@
     line-height: 16px;
   }
 
+  .editions__slide-btn {
+    width: 100%;
+  }
+
   .editions__slide-name {
     font-weight: 700;
   }
@@ -590,6 +603,15 @@
     max-height: none;
     max-width: none;
     column-count: unset;
+  }
+
+  .editions__filter {
+    margin-bottom: 23px;
+  }
+
+  .editions__filter-prices {
+  padding-top: 13px;
+  font-weight: 600;
   }
 
   .editions__filter-categories {

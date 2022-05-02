@@ -465,7 +465,7 @@
   }
 
   .catalog__painters-btn {
-    height: 74px;
+    height: 73px;
   }
 
   .catalog__painters-years {
@@ -481,14 +481,19 @@
 
   .catalog__painters-list-active {
     margin: 21px 0;
+    padding: 4px 0;
   }
 
   .catalog__img {
     margin-bottom: 16px;
   }
 
+  .catalog__item-lived {
+    margin-bottom: 9px;
+  }
+
   .catalog__item-title {
-    margin-bottom: 10px;
+    margin-bottom: 11px;
   }
 
   .catalog__painter-isempty {

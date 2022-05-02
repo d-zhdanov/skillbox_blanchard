@@ -66,7 +66,7 @@
     // overlay.removeChild(overlay.firstElementChild);
     // overlay.classList.remove('galery--active');
     overlay.style.display = 'none';
-    // document.querySelector('body').style.overflow = 'auto';
+    document.querySelector('body').style.overflow = 'auto';
     // overlay.style.overflow = 'auto';
     // const scrollY = document.body.style.top;
     // // document.body.style.position = '';

@@ -19,7 +19,8 @@
     });
 
     openBtn.addEventListener("click", function (evt) {
-      this.disabled = true;
+      this.style.opacity = '0';
+      closeBtn.style.display = 'block';
 
       if (
         !search.classList.contains(params.activeClass) &&
@@ -30,13 +31,15 @@
     });
 
     closeBtn.addEventListener('click', function () {
-      openBtn.disabled = false;
+      openBtn.style.opacity = '1';
+      closeBtn.style.display = 'none';
       search.classList.add(params.hiddenClass);
     });
 
     document.body.addEventListener('click', function (evt) {
       if (!evt._isSearch && search._isOpened) {
-        openBtn.disabled = false;
+        openBtn.style.opacity = '1';
+        closeBtn.style.display = 'none';
         search.classList.add(params.hiddenClass);
       }
     });

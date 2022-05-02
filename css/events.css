@@ -268,6 +268,11 @@
 
 
 @media (max-width: 650px) {
+  .events__title {
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+
   .events__list {
     flex-wrap: nowrap;
   }
@@ -279,5 +284,16 @@
   .events__item {
     width: 100%;
     margin-right: 0;
+    margin-bottom: 14px;
+    padding-bottom: 15px;
+  }
+
+  .swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,10px));
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,10px));
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap,8px);
   }
 }

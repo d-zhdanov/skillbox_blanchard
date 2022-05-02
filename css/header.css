@@ -296,6 +296,7 @@
 }
 
 .search-form__input {
+  margin-right: 24px;
   display: inline-block;
   color: white;
   padding: 4px 0;
@@ -376,7 +377,7 @@
 .submenu li:not(:last-child) {
   margin-bottom: 20px;
 }
-.submenu li a {
+.submenu__link {
   max-width: 220px;
   /* height: 40px; */
   position: relative;
@@ -390,15 +391,17 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-origin: border-box;
+  transition: border-color .3s ease-in-out;
 }
-.submenu li a:focus-visible,
-.submenu li a:hover {
+.submenu__link:focus-visible,
+.submenu__link:hover {
   border-color: #9D5CD0;
 }
-.submenu li a:active {
+.submenu__link:active {
   border-color: #D1A9F0;
 }
-.submenu li a:active::after {
+.submenu__link:active::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -555,6 +558,32 @@
 
 .search-btn {
   display: none;
+  transition: opacity .3s ease-in-out;
+}
+
+.close-btn {
+  display: none;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+}
+.close-btn::before,
+.close-btn::after {
+  content: '';
+  position: absolute;
+  transform-origin: center;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+.close-btn::before {
+  transform: rotate(-45deg);
+}
+.close-btn::after {
+  transform: rotate(45deg);
 }
 
 @keyframes dropdownOpen {
@@ -618,7 +647,7 @@
 
   .nav {
     position: fixed;
-    left: -150vw;
+    left: -200vw;
     top: 0;
     width: 100%;
     height: 100%;
@@ -708,11 +737,47 @@
     height: 18px;
   }
 
+  .search-form.is-opened {
+    padding-left: 57px;
+    padding-right: 64px;
+    position: fixed;
+    top: 0;
+    height: 75px;
+    transform: none;
+  }
+  .search-form.is-opened .search-form__input::placeholder {
+    color: transparent;
+  }
+
+  .search-form__input {
+    width: 180px;
+  }
+
+  .search-btn__img,
+  .search-form__button-img {
+    width: 16px;
+    height: 16px;
+  }
+
   .search-btn,
   .search-btn__img {
     width: 18px;
     height: 18px;
   }
+
+  .close-btn {
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+  }
+
+  .close-btn::before,
+  .close-btn::after {
+    height: 2px;
+  }
+
 
   .logo {
     width: 96.8px;
