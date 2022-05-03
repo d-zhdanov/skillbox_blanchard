@@ -144,10 +144,10 @@ const projects_swiper = new Swiper('.projects__swiper', {
     }
   },
 
-  autoplay: {
-      delay: 6000,
-      waitForTransition: true,
-  },
+  // autoplay: {
+  //     delay: 6000,
+  //     waitForTransition: true,
+  // },
 });
 
 // $('.swiper-pagination').each(function (){
