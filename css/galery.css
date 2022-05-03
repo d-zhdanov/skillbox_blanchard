@@ -120,7 +120,7 @@
 }
 
 .choices__list--dropdown .choices__item--selectable {
-  padding: 4px 14px;
+  padding: 1px 14px;
   color: #999;
   transition: color, background-color .3s ease-in-out ;
 }
@@ -132,6 +132,10 @@
 .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
   color: #fff;
   background-color: rgba(255, 255, 255, .2);
+}
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+  padding: 4px 14px;
 }
 
 .choices__list--dropdown, .choices__list[aria-expanded] {
