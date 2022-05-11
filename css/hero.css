@@ -126,6 +126,7 @@
 
   .hero__text {
     padding-top: 173px;
+    padding-bottom: 114px;
   }
 
   .hero__title {
@@ -157,13 +158,16 @@
   }
 
   .hero__title {
+    margin-bottom: 12px;
     font-size: 32px;
     line-height: 36.8px;
     text-align: center;
   }
 
   .hero__desc {
-    margin-bottom: 58px;
+    margin-bottom: 41px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 12px;
     line-height: 16.34px;
     font-weight: 400;

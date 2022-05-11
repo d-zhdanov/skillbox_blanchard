@@ -108,7 +108,7 @@
 
 .catalog__img {
   width: 100%;
-  margin-bottom: 27px;
+  margin-bottom: 30px;
 }
 
 .catalog__painters-item:not(:first-child) {
@@ -153,7 +153,9 @@
 }
 
 .catalog__painters-btn {
-  height: 116px;
+  /* height: 116px; */
+  padding-top: 32px;
+  padding-bottom: 32px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -253,8 +255,11 @@
 }
 
 .catalog__painters-list-active {
+  min-height: 342px;
   display: block;
-  padding: 26px 0;
+  /* padding: 26px 0; */
+  padding-top: 26px;
+  padding-bottom: 25px;
   animation: catalog__painters-appear .5s;
 }
 
@@ -398,6 +403,10 @@
     padding-bottom: 30px;
   }
 
+  .catalog__title {
+    margin-right: 40px;
+  }
+
   .catalog__item-active {
     flex-direction: column;
   }
@@ -410,8 +419,13 @@
     order: 2;
   }
 
+  .catalog__img {
+    margin-bottom: 27px;
+  }
+
   .catalog__btn-list {
-    transform: translateY(0);
+    width: 100%;
+    transform: translateY(2px);
   }
 
   .catalog__btn-item:not(:last-child) {
@@ -440,7 +454,7 @@
   .catalog__btn-list {
     width: 100%;
     justify-content: space-between;
-    margin-top: -5px;
+    margin-top: -7px;
   }
 
   .catalog__btn-item:not(:last-child) {
@@ -468,11 +482,13 @@
   }
 
   .catalog__tags {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
   }
 
   .catalog__painters-btn {
-    height: 73px;
+    /* height: 73px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .catalog__painters-years {
@@ -487,7 +503,7 @@
   }
 
   .catalog__painters-list-active {
-    margin: 21px 0;
+    margin: 17px 0;
     padding: 4px 0;
   }
 
@@ -496,7 +512,11 @@
   }
 
   .catalog__item-lived {
-    margin-bottom: 9px;
+    margin-bottom: 6px;
+  }
+
+  .catalog__item-desc {
+    padding-right: 1px;
   }
 
   .catalog__item-title {

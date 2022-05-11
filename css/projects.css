@@ -5,7 +5,7 @@
 
 .projects__text {
   display: block;
-  margin-bottom: 18px;
+  margin-bottom: 21px;
   max-width: 1080px;
   font-size: 16px;
   line-height: 32px;
@@ -97,13 +97,14 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  margin-bottom: 5px;
+  margin-bottom: 22px;
 }
 
 .projects__slider {
   width: 100%;
   /* height: 150px; */
   position: relative;
+  font-size: 0;
 }
 
 .projects__swiper,
@@ -265,12 +266,16 @@
   }
 
   .projects__partner-title {
-    margin-bottom: 11px;
+    margin-bottom: 30px;
   }
 }
 
 
 @media (max-width: 650px) {
+  .projects__title {
+    margin-bottom: 11px;
+  }
+
   .projects__swiper,
   .projects__wrapper {
     width: calc(195 / var(--min-width) * 100vw);

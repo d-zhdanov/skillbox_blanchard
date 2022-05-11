@@ -39,6 +39,11 @@
 
 
 @media (max-width: 1365px) {
+  .footer__logo-img {
+    width: 174px;
+    height: 40px;
+  }
+
   .footer__social-item:not(:last-child) {
     margin-right: 30px;
   }

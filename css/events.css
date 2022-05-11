@@ -4,7 +4,7 @@
 }
 
 .events__title {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .events__list {
@@ -14,7 +14,7 @@
 }
 
 .events__article {
-  min-height: 658px;
+  min-height: 656px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;;
@@ -93,7 +93,7 @@
   /* height: 100%; */
   margin-right: 50px;
   margin-bottom: 50px;
-  padding-bottom: 40px;
+  padding-bottom: 42px;
   border: 1px solid #CACACA;
   box-sizing: border-box;
 }
@@ -113,14 +113,14 @@
 
 .events__desc {
   margin-bottom: auto;
-  padding: 10px 20px 43px 49px;
+  padding: 11px 19px 43px 49px;
 }
 
 .events__item-where,
 .events__item-when {
   display: block;
-  /* text-align: right; */
-  font-weight: 600;
+  text-align: right;
+  /* font-weight: 600; */
   font-size: 12px;
   line-height: 16px;
   color: #999;
@@ -128,7 +128,7 @@
 
 .events__item-title {
   margin-bottom: 2px;
-  padding-top: 5px;
+  padding-top: 4px;
   font-weight: 600;
   font-size: 24px;
   line-height: 33px;
@@ -145,7 +145,7 @@
   margin-left: 50px;
   position: relative;
   font-size: 16px;
-  line-height: 29px;
+  line-height: 26px;
   color: #9D5CD0;
   border-bottom: 1px solid #9D5CD0;
   transition-property: border-color;
@@ -252,16 +252,25 @@
 
 @media (max-width: 860px) {
   .events__item {
-    width: calc(100% / 2 - 20px / 2);
-    margin-right: 20px;
+    width: calc(100% / 2 - 33px / 2);
+    margin-right: 33px;
   }
 
   .events__item:nth-child(3n) {
-    margin-right: 20px;
+    margin-right: 33px;
   }
 
   .events__item:nth-child(2n) {
     margin-right: 0;
+  }
+
+  .events__desc {
+    padding-top: 11px;
+    padding-right: 19px;
+  }
+
+  .events__item-where, .events__item-when {
+    margin-right: -1px;
   }
 }
 
@@ -277,6 +286,11 @@
     flex-wrap: nowrap;
   }
 
+  .events__desc {
+    padding-right: 12px;
+    padding-left: 28px;
+  }
+
   .events__more {
     display: none;
   }
@@ -284,8 +298,20 @@
   .events__item {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 14px;
+    margin-bottom: 3px;
     padding-bottom: 15px;
+  }
+
+  .events__item-title {
+    margin-bottom: 35px;
+  }
+
+  .events__item-desc {
+    padding-right: 10px;
+  }
+
+  .events__item-link {
+    margin-left: 28px;
   }
 
   .swiper-pagination-bullet {
