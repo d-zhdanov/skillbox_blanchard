@@ -184,6 +184,33 @@ body {
   overflow: scroll;
 }
 
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.modal__close::before,
+.modal__close::after {
+  content: '';
+  position: absolute;
+  width: 21px;
+  height: 1px;
+  /* top: 50%; */
+  left: 0;
+  background-color: #000;
+  transform-origin: center;
+}
+.modal__close::before {
+  transform: rotate(45deg);
+}
+.modal__close::after {
+  transform: rotate(135deg);
+}
+
+
 .overflow-hidden {
   overflow: hidden;
 }
