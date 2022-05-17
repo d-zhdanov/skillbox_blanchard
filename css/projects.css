@@ -5,7 +5,7 @@
 
 .projects__text {
   display: block;
-  margin-bottom: 21px;
+  margin-bottom: 19px;
   max-width: 1080px;
   font-size: 16px;
   line-height: 32px;
@@ -97,7 +97,7 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 .projects__slider {
@@ -251,6 +251,7 @@
 
 @media (max-width: 860px) {
   .projects__text {
+    margin-right: 8px;
     margin-bottom: 25px;
   }
 
@@ -266,14 +267,18 @@
   }
 
   .projects__partner-title {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
 }
 
 
 @media (max-width: 650px) {
+  .projects {
+    padding-bottom: 9px;
+  }
+
   .projects__title {
-    margin-bottom: 11px;
+    margin-bottom: 12px;
   }
 
   .projects__swiper,
@@ -285,5 +290,17 @@
   .projects__img {
     width: calc(195 / var(--min-width) * 100vw);
     height: calc(65 / var(--min-width) * 100vw);
+  }
+
+  .projects__text {
+    margin-right: -3px;
+    margin-bottom: 10px;
+  }
+
+  .projects__partner-title {
+    margin-bottom: 11px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
   }
 }

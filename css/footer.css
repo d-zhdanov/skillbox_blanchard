@@ -56,10 +56,18 @@
 
 
 
+@media (max-width: 1024px) {
+  .footer {
+    padding-top: 2px;
+  }
+}
+
+
+
 @media (max-width: 650px) {
   .footer__container {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 19px;
+    padding-bottom: 21px;
     flex-direction: column-reverse;
   }
 
@@ -70,5 +78,10 @@
 
   .footer__logo {
     margin: 0;
+  }
+
+  .footer__logo-img {
+    width: 96px;
+    height: 32px;
   }
 }
